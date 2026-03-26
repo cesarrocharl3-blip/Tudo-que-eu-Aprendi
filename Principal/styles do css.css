@@ -1,0 +1,218 @@
+/* OBSERVAÇÕES */
+/* Parecido com HTML q quando vc coloca " /* " que dizer tudo, no CSS se vc colocar apenas " * " também quer dizer tudo */
+/* NEGRITO -No CSS é bold = font-weight:bold; */
+
+/* SELETORS NO CSS */
+body{
+    font-family: "Space Grotesk", sans-serif;
+}
+
+p{
+    line-height: 25px;
+    text-indent: 3em;
+}
+
+div{
+    margin: 50px;
+}
+
+h4{
+    font-family: 'Overpass Mono', monospace;
+    font-size: 30px;
+}
+
+h3{
+    font-family: 'Overpass Mono', monospace;
+    text-align: center;
+    font-size: 30px;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+.div1-1{
+    a{
+        color: black;
+        text-decoration: none;
+        margin: 0 30px;
+    }
+    .button, .button2{
+        margin: 0 60px;
+    }
+}
+
+.button{
+cursor: pointer;
+background-color: #C2C2C2;
+border-radius: 25px;
+font-size: 30px;
+filter: drop-shadow(0px 0px 5px #191919);
+font-family: "Datatype", monospace;
+}
+
+.button2{
+cursor: pointer;
+background-color: #C2C2C2;
+border-radius: 25px;
+font-size: 30px;
+filter: drop-shadow(0px 0px 5px #191919);
+font-family: "Datatype", monospace;
+}
+
+.button:hover, .button2:hover{
+    opacity: 0.8;
+}  
+
+header ul{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    padding: 0;
+    margin: 0 50px;
+}
+
+header li{
+    margin: 0;
+}
+
+header a{
+    font-family: 'Overpass Mono', monospace;
+    font-weight: 700;
+    font-size: 22px;
+    text-decoration: none;
+    color: #ffffff;
+    padding: 6px 10px;
+    border: 3px solid #000000;
+    border-radius: 8px;
+    display: inline-block;
+    background-color: #F15025;
+}
+
+header a:hover{
+    opacity: 0.8;
+}
+
+#titulo{
+font-family: "Datatype", monospace;
+font-size: 85px;
+text-align: center;
+}
+
+#titulo1{
+color: rgb(58, 187, 25);
+text-align: center;
+text-decoration: underline;
+}
+
+    #titulo2{
+        font-family:"Datatype", monospace;
+        font-size: 30px;
+        letter-spacing: 15px;
+        text-align: center;
+        text-decoration: underline;
+        text-shadow: 5px 5px 10px;
+    }
+
+.cor1{
+    color: blue;
+    background-color: gray;
+     
+}
+/* Os códigos no CSS sempre são aplicados em cascta, de cima para baixo, sempre o de baixo é o q é aplicado */
+ 
+#cor2{
+    background-color: rgb(206, 238, 91);
+    color: rgba(33, 17, 121, 1);
+}
+
+.div8-1{
+    background-color: #A0E68D;
+    padding: 60px;
+    margin: 40px;
+}
+
+.diva{
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    margin: 10px;
+    text-align: center;
+}
+
+.div1{
+    background-color: #A0E68D;
+}
+
+.div2{
+    background-color: #e68dd0;
+}
+
+.div3{
+    background-color: #8dbee6;
+}   
+
+.divb{
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    margin: 10px;
+    display: inline;
+     /*QUANDO display:inline; ESTA NO ELEMENTO O WIDTH E HEIGHT SÃO IGNORADOS */
+}
+
+.div1{
+    background-color: #A0E68D;
+}
+
+.div2{
+    background-color: #e68dd0;
+}
+
+.div3{
+    background-color: #8dbee6;
+}   
+
+.divc{
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    margin: 10px;
+    text-align: center;
+    display: inline-block;
+}
+
+.div1{
+    background-color: #A0E68D;
+}
+
+.div2{
+    background-color: #e68dd0;
+}
+
+.div3{
+    background-color: #8dbee6;
+}   
+
+.b-end2{
+    font-family: 'Overpass Mono', monospace;
+    font-weight: 700;
+    font-size: 22px;
+    padding: 6px 10px;
+    border: 3px solid #000000;
+    border-radius: 8px;
+    background-color: #F15025;
+    margin-left: 1350px;
+}   
+
+.b-end2 a{
+    color: #ffffff;
+    text-decoration: none;     
+}
+
+.b-end2:hover{
+    opacity: 0.8;
+}

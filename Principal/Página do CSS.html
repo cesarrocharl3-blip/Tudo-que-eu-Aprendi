@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Aprendizado .CSS </title>
+    <!-- Está linha abaixo é referente ao link do HTML com o CSS -->
+    <link rel="stylesheet" href="styles do css.css">
+<!-- Estas 3 linhas a baixo são referente a fonte que eu estou usando (via link) após calr aqui vc precisa ir no CSS e falar qual font-family dessa font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Datatype:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+ 
+<div>
+    <h1 id="titulo"> Tudo que eu aprendi em .CSS até agora: </h1>
+
+    <p>
+    Continuo me chamando Cesar, e continuo nas aulas, mas agora estou aprendendo CSS, então seguindo a linha de raciocínio do HTML aqui eu vou aplicar tudo que eu aprendi nas aulas de CSS.
+    </p>
+</div>
+
+<div class="div1-1">
+            <h2>Veja também > > </h2>
+            <button class="button"> <a href="/Principal/Página do HTML.html"> HTML </a> </button>
+            <button class="button"> <a href="Página CSS Intermediário.htm"> CSS Intermediário </a> </button>
+            <button class="button2"> <a target="_blank" href="/Desafio do CSS/Desafio.html"> Pág. Desafio 1 </a> </button>
+</div>
+
+<div>
+    
+<h2> Links dos Tópicos > > >  </h2>
+
+    <header>
+         
+        <ul>
+            <li> <a href="#intro">Introdução ao CSS</a> </li>
+            <li> <a href="#seletores">Seletores do CSS</a></li>
+            <li> <a href="#unidades">Unidades de Medida</a></li>
+            <li> <a href="#etexto">Edição de Texto</a></li>
+            <li> <a href="#mep">Margin e Padding</a></li>
+            <li> <a href="#boxs">Box Sizing</a></li>
+            <li> <a href="#display">Display</a></li>
+            <li> <a href="#criasite">Criação de Layout</a></li>
+        </ul>
+    </header>
+
+</div>
+
+<div>
+    <h3 id="intro">  🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 Introdução ao CSS 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄  </h3>
+
+    <p> 
+        Vc consegue mudar a aparência usando uma TAG chamada <b>"style"</b> na própria página do HTML, porém a algumas diferenças, por exemplo, dentro da TAG não há mais a necessidade de usar o sinal
+    de maior e menor para abrir a TAG do q vc quer alterar, vou usar o texto abaixo para editar como exemplo: 
+    </p>
+</div>
+
+<div>
+    <h2 class="ex1"> O que é CSS? </h2>
+
+<style>
+    .ex1{
+        font-size: 45px;
+        color: rgb(26, 255, 26);
+        background-color: gray;
+        text-align: center; 
+    }
+</style>
+
+    <p>
+     style> <br>
+    h2{ <br>
+        font-size: 45px; <br>
+        color: green; <br>
+        text-align: center; <br>
+        background-color: gray; <br>
+    } <br>
+ style/> <br>
+
+    </p>
+
+    <p>
+        Nessa TAG style por exemplo eu utilizei o atributo: <br>
+    <b>"font-size"</b> para aumentar o tamanho da letra <br>
+    <b>"color"</b> para mudar a cor da letra <br> 
+    <b>"text-align"</b> para centralizar o texto <br>
+    <b>"background-color"</b> para mudar a cor de fundo do texto 
+    </p>
+
+    <p>
+        E como vc pode ver além do "h2" não ter os sinais de abertura e fechamento, se usa as cheves ( { } ) para abrir e fechar o código de edição <br>
+    <b>OBS:</b> Vc consegue ver os códigos em qualquer site que vc entrar e qual estilo de fonte por exemplo o mesmo está usando para usar nos projetos, para isso é só vc clicar com o botão 
+    direito do mouse no site e ir em "inspecionar" e depois clicar na setinha que esta ao lado esquerdo de "Elementos" e selecionar a aprte que vc tem interesse
+    </p>
+</div>
+
+<div class="div4">
+    <h4> Iniciando no CSS </h4>
+
+    <p> 
+        Mesmo agente aprendendo essa forma de personalizar usando a TAG "style", essa não é a melhor forma de personalizar a sua página, só é indicada caso seja algo muito pequeno onde não ficará muito 
+    confuso, caso contrário é melhor abrir uma nova aba no VSCode para separar as coisa, e para isso lembre-se sempre de nomea-la com o final ".css" para o sistema entender que aquele é um arquivo CSS
+    </p>
+
+    <p> 
+        Após a criação da nova aba vc precisa linkar a sua página com as edições q vc fará no CSS então vc precisa colocar em " < head> " <br>
+    <b> link rel="stylesheet" href="./nome-da-sua-aba.css"> </b> Após isso, a sua página HTML estará entendendo q a sua nova aba CSS será pra ela
+    </p>
+</div>
+
+<div class="div5">
+    <h3 id="seletores">  🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 Seletores do CSS 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄  </h3>
+
+    <p> 
+        Vc consegue ter diferentes seletores no CSS um deles é apenas colocar a TAG do que vc for personalizar como: <b> h3{ color:green} </b> se vc fizer desta forma todos os títulos "h3" 
+    do seu site será pintado de verde, e isso serve para qualquer utra TAG q vc usar desta maneira, por isso se vc tiver vários títulos "h3" e quer estiliza-los individualmente é necessário outra forma 
+    </p>
+
+    <p>
+        Para identifica-los individualmente vc precisa criar um <b>"id"</b> para cada item, assim quando vc estiver personalizando o CSS saberá em qual título vc quer mexer, mas diferente do
+         HTML q vc rastreia pelo "for" no CSS vc utiliza apenas uma <b>#</b> antes do id, por exemplo: <br>
+        Se meu id for: <b>id="titulo1"</b> (Lembrando q o id vai dentro da TAG) <br>
+        No CSS será: #titulo1 { color:green } <br>
+        Ex:
+    </p>
+     
+    <h1 id="titulo1"> Titulo 1 Exemplo </h1>
+
+    <p>
+    Também tem a opção de <b>"class"</b>, que é parecida com <b>id</b> porém é mais utilizada quando vc quer selecionar várias TAGs diferentes, e difente do id q vc idêntica com #, quando se 
+    usa a <b>class</b> vc coloca <b>" . "</b>, exemplo: <br>
+<b>HTML</b> <br>
+  h1 class="cor1"> Título 2 Exemplo  h1> <br>
+  h1 class="cor1"> Título 3 Exemplo  h1> <br>
+  h1 class="cor1">   /h1> <br>
+<b>CSS</b> <br>
+ .class{  <br> 
+    color:blue; <br>
+    background-color:gray; <br>
+ } <br>
+Ex: Se vc quer editar os titulos do seu site todos semelhantes basta usar o class para selecionar os titulos 
+    </p>
+
+    <h1 class="cor1"> Título 2 Exemplo </h1> 
+    
+    <h1 class="cor1"> Título 3 Exemplo </h1>
+
+    <p>
+        Vc também pode fazer múltipla seleção tanto de class como de id apenas colocando uma vírgula e continuando a colocar oque vc quer, exemplo: <br>
+    #titulo1, .cor1, p { <br>
+        color:blue; <br>
+    } <br>
+    Dessa forma vc selecionou o <b> id </b> o <b> class </b> e todas as TAGs <b> p </b> <br>
+    Você pode também por exemplo selecionar todos os itens dentro de uma div, por exemplo: <br>
+    #div8 img {  margin: 0;  } <br>
+    Nesse caso eu selecionei todas as imagens <b>(img)</b> da div, com o id="div8" <b>(div8)</b> e estou falando q não quero margem
+    </p>
+
+    <p>
+    <b>Cores =</b> Existem várias formas de colocar a cor, mas as mais comuns são <b>Decimais</b> -  background-color: rgb(50, 50, 50); e <b>Hexadecimais</b> - color: #D399; <br>
+Exemplo:
+    </p>
+
+    <h4 id="cor2">________Exemplo________</h4>
+
+</div>
+
+<div class="div6">
+    <h3 id="unidades">  🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 Unidades de Medida 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄  </h3>
+
+    <p>
+        Existem várias unidades de medida como cm e mm, mas na programação se usa majoritariamente o <b>px</b> q é o pixel <br>
+        Mas também tem as <b>Unidades Relativas</b> que são úteis quando vc quer manter uma proporção de acordo com a tela que esta sendo aberta seu site, por exemplo: <br>
+<ul>
+    <li> vw (view width) - 1vw é igual a 1% da largura do navegador </li>
+        <li>vh (view height) 1vh é igual a 1% da altura do navegador </li>
+</ul>
+Usando esses caras vc consegue deixar por exempo uma janela de vídeo sempre ocupando 50% da tela do aparelho, seja no computador, ou celular <br>
+A porcentagem <b>%</b> também é uma unidade de tamanho, ela sempre vai ser relacionada ao tamanho de cima
+    </p>
+</div>
+
+<div class="div7">
+    <h3 id="etexto">  🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 Edição de Texto 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄  </h3>
+
+    <p>
+    Ja vimos como mudar a cor, porém para os textos tem várias personalizações úteis q é legal aprender, entre elas tem uma chamada <b>font-family</b> usada para alterar
+    a fonte geral do seu site, no google existem diversar fontes diferentes para colocar no seu site <b>( google fonts)</b> e para fazer isso tem duas opções: <br>
+    </p>
+
+   <p> 
+    Após selecionar uma ou mais fonte no google fonts vc tem a opção de <b> < link > </b> e <b> @ import</b>, na opção de link basta vc copiar o código com a TAG de link que estará em um 
+    quadrado de seleção ( 1 ) e copia-lo no "head" do seu HTML, e após isso usar linha de código do "font-family" que estará em outro quadrado de seleção abaixo da seleção anterior ( 2 ), para 
+    alterar a fonte do texto selecionado:
+    </p>
+
+    <img src="../imagens/Print1.png" alt="Fontes via link" height="350px">
+
+    <p>
+    Na opção de @import basta vc copiar o link da primeira caixa de seleção e colar no topo do seu arquivo CSS, e depois fazer o mesmo processo de colocar o font-family onde quiser alterar a fonte:
+    </p>
+
+    <img src="../imagens/Print2.png" alt="Fonte via @import" height="200px">
+
+    <p>
+    Após isso vc estará pronto para fazer as diversas edições possíveis no seu texto usando diferentes atributos, como por exemplo:
+    </p>
+
+<ul style="line-height: 25px;">
+    <li> <b>font-size</b> - Tamanho da fonte - ex: font-size: 30px; </li>
+    <li> <b>font-weight</b> - Para alter a grossura da fonte - ex: font-weight: 200px; </li>
+    <li> <b>font-style</b> - Colocar em itálico por exemplo, mas tem outras opções - ex:   font-style: italic; </li>
+    <li> <b>line-height</b> - Para alterar o espaçamento entre as linhas do texto - ex: line-height: 50px;</li>
+    <li> <b>letter-spacing</b> - Para alterar o espaçamento entre as letras das palavras - ex: letter-spacing: 30px;</li>
+    <li> <b>word-spacing</b> - Espaçamento entre as palavras - ex: word-spacing: 30px; </li>
+    <li> <b>text-align</b> - Utilizado para centralizar, deixar a esquerda, direita ou justificar o texto - ex: text-align: center ou rigth ou left ou justify;</li>
+    <li> <b>text-transform</b> - Para deixar o texto todo maiúsculo, minúsculo, ou só a primeira letra maiúscula - ex: text-transform: uppercase ou lowercase ou capitalize;</li>
+    <li> <b>text-decoration</b> - Para deixar o texto com um underline ou com uma linha acima entre outras opções - ex: text-decoration: underline ou overline; </li>
+    <li> <b>text-shadow</b> - É um efeito de sombra q vc precisa colocar 3 tamnhos referente a distância da sombra horizontal, vertical e nitidez da sombra - ex: text-shadow: 5px 5px 10px; </li>
+</ul>
+ 
+    <p>
+        Exemplo: Este texto abaixo esta usando o espaçamento de letras, tamanho, centralizar texto, underline, text shadow e alterando a fonte com font family
+    </p>
+
+    <h6 id="titulo2"> Exemplo de frase com algumas edições ! </h6>
+</div>
+
+<div class="div8">
+    <h3 id="mep">  🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 Margin e Padding 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄  </h3>
+
+    <p>
+    A <b>margin</b> e o <b>padding</b> são tipos de margens, exemplo, se eu fizer uma div eu consigo colorir o background para ter uma visão melhor do padding:
+    <div class="div8-1">
+        <p>
+            _______Espaço da div_______ 
+        </p>
+    </div>
+    background-color: #A0E68D; <br>
+    padding: 60px; <br>
+    margin: 40px;
+    </p>
+    
+    <p>
+        Esta frase acima esta em uma div com padding de 60 pixels e uma margem de 40 pixels, no navegador se vc clicar em inspecionar é possível ver todas as 
+        medidas que vc esta usando:
+
+        <img src="../imagens/Print4.png" alt="Margin e Padding" height="250px"> <br>
+
+        Nessa imagem é possível ver claramente qual margem correspondem a qual espaço no site <br>
+        Se no código vc colocar apenas padding: 60px; ou margin: 40px; o CSS vai colocar este tamanho de borda em todos os lados, porém em ambos os casos existe 
+        a função de colocar o tamanho da margem separadamente, exemplo:<br>
+       
+        
+        <ul style="line-height: 25px;">
+            <li>margin-top - Margem de cima </li>
+            <li>margin-right - Margem da direita </li>
+            <li>margin-botton - Margem de baixo </li>
+            <li>margin-left - Margem da esquerda </li>
+        </ul>
+
+        <b>Atalho do Relógio:</b> Vc também pode colocar as medidas todas juntas em um único código exemplo " padding: 10px 15px 20px 30px " sendo q os lados correspondem 
+        respectivamente a 12 horas, 15 horas, 18 horas e 21 horas, ou seja, top, right, botton e left <br>
+        OBS: Seguindo esse padrão se vc escrever apenas 3 numeros o do meio corresponderá a medida dos dois lados, exemplo " margin: 10px <b>15px</b> 20px" nesse caso tanto o left 
+        como o right terção <b>15px</b>, e se vc escrever apenas dois numeros, significa altura e largura respectiamente, exemplo " margin: 10px 15px" margem de cima e de baixo 
+        10 pixels, e da esquerda e direita 15 pixels
+    </p>
+</div id>
+
+<div class="div9">
+    <h3 id="boxs">  🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 Box Sizing 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄  </h3>
+
+    <p>
+        Se vc colocar elementos como padding, ou border o tamanho do seu elemento vai aumentar, por exemplo, se vc tem uma div com 100px de largura e 100px de altura, e vc adiciona 10px de padding, 
+        o tamanho da sua div vai ser de 120px, e para que isso não aconteça, vc pode usar o <b>box-sizing: border-box;</b> que vai fazer com que o tamanho da div seja sempre o tamanho específico que vc quer,
+        e tudo adicionado posteriormente será deduzido do tamanho inicial da div <br>
+        Normalmente se é usado em projetos logo no começo dos projetos dessa forma: <br>
+        <b>*{ box-sizing: border-box; } </b>  - Sendo o " * " um seletor universal que seleciona todos os elementos da página
+    </p>	
+
+</div>
+
+<div class="div10">
+    <h3 id="display">  🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 Display 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄  </h3>
+
+    <p>
+        A TAG <b>"display"</b> é usada para alterar o tipo de exibição de um elemento, os elementos já vêm por padrão "display: block;" porém existem outros atributos interessantes, vamos ver 3 deles agora:
+    </p>
+    <ul>
+        <li>
+            <b>display: block;</b> - O elemento vai ocupar todo o espaço da linha disponível, não sendo possível colocar outros elementos na mesma linha, exemplo:
+            <div class="diva div1">DIV1</div>
+            <div class="diva div2">DIV2</div>
+            <div class="diva div3">DIV3</div>
+        </li>
+
+        <li style="margin-top: 20px;">
+            <b>display: inline;</b> - O elemento vai ocupar apenas o espaço necessário, podendo colocar outros elementos na mesma linha e tendo margem para espaçamentos apenas laterais (ignora o width e height), exemplo: <br>
+            <div class="divb div1">DIV1</div>
+            <div class="divb div2">DIV2</div>
+            <div class="divb div3">DIV3</div> <br>
+            (As três DIV's tem as mesmas configurações, mudando apenas o atributo da TAG de "display") <br>
+        </li>
+        
+        <li style="margin-top: 20px;">
+            <b>display: inline-block;</b> - O elemento vai ocupar apenas o espaço necessário, podendo ser em linha, ou seja delimitando seu espaço tanto lateralmente quanto verticalmente, exemplo: <br>
+            <div class="divc div1">DIV1</div>
+            <div class="divc div2">DIV2</div>
+            <div class="divc div3">DIV3</div>
+        </li>
+    </ul>
+
+</div>
+
+<div class="div11">
+    <h3 id="criasite">  🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 Criação do Layout de um Site 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄  </h3>
+
+    <p>
+        Para a criação de um site é extremamente importante a criação do design do site, onde vai ficar cada botão, onde fica o menu, entre outros tópicos <br>
+        E para fazer isso são muito utilizados principalmente duas fontes o site <b>FIGMA</b> e o <b>ADOBE XD</b> 
+    </p>
+
+</div>
+
+<button class="b-end2"> <a href="#titulo"> Voltar para o começo  </a> </button>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

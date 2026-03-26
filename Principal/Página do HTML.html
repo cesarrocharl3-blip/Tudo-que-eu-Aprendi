@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<!-- Quando começar uma nova página no html é só colocar html:5 que o VScode já vai criar a estrutura básica do html para vc -->
+
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8"> <!-- Padrão de caracteres que agente usa no BR-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Código para permitir que seja aberto em celulares-->
+ <!-- Está linha abaixo é referente ao link do HTML com o CSS -->
+    <link rel="stylesheet" href="styles do html.css">
+<title> Aprendizado .HTML </title>
+    <!-- Em head vc coloca a como vai ser seu site por exemplo o title é o q aparece na aba do site e a fonte que vc vai querer q seu site tenha-->
+
+    <!-- Fonte das letras -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Datatype:wght@100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="div1">
+        <!-- No body vc coloca todo texto visível no seu site -->
+        <h1 id="titulo"> Tudo que eu aprendi em .HTML até agora: </h1>
+        
+        <p> 
+            Meu nome é Cesar e esse é o meu primeiro site acompanhado as aulas do DevClub, aqui eu vou aplicar todo meu
+            conhecimento adquirido nas aulas, Bora lá!
+        </p>
+    </div>
+    <div class="div1-1">
+        
+        <h2>Veja também > > </h2>
+        <button class="button"> <a href="/Principal/Página do CSS.html"> CSS </a> </button>
+        <button class="button2"> <a href="Página CSS Intermediário.htm"> CSS Intermediário </a> </button>
+    
+    </div>
+        <!-- SEO Search Engine Optimization: São técnicas utilizadas para melhorar o posicionamento de um site em mecanismos de busca -->
+    
+
+    <div class="div2">
+
+        <h2 id="links"> Links dos Tópicos > > >  </h2>
+        
+        <header>
+                <ul>
+                    <li> <a href="#texto"> TAGs de Texto </a> </li>
+                    <li> <a href="#imagem"> TAGs de Imagem </a> </li>
+                    <li> <a href="#link"> TAGs de Link </a> </li>
+                    <li> <a href="#lista"> TAGs de Lista </a> </li>
+                    <li> <a href="#elementos-estruturais"> TAGs para Elementos Estruturais e Semânticos </a> </li>
+                    <li> <a href="#tabela">TAGs de Tabela</a> </li>
+                    <li> <a href="#vídeo">TAGs de Vídeo </a></li>
+                    <li> <a href="#iframe"> TAGs de Iframe </a></li>
+                    <li> <a href="#input"> TAGs de INPUT </a></li>
+                    <li> <a href="#forms"> TAGs de FORMS</a></li>
+                </ul>
+        </header>
+    </div>
+
+    <div class="div3">
+        <!-- TEXTO -->
+        <h3 id="texto">🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 TAGs de Textos 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄  </h3>
+
+        <p> 
+            TAG de Títulos de " h1 " até " h6 " são as TAG para marcar a importância desses títulos, sendo o h1 o mais
+            importante e prosseguindo até o h6, serve para melhorar o SEO do seu site 
+        </p>
+        <p> 
+            A TAG " br " é abreviação de break line para pular linhas, exemplo:<br>
+            Eu utilizei agora, para em um mesmo parágrafo eu poder colocar essa linha abaixo <br>
+            Usei de novo 
+        </p>
+        <p> 
+            TAG " b " para deixar em <b> Negrito</b>
+        </p>
+        <p> 
+            TAG " strong " também deixa em negrito pórem ela também tem a função de melhorar o SEO do site por exemplo:
+            <strong> Site de aprendizado </strong> (está com a TAG strong)
+        </p>
+        <p> TAG " i " para deixar em <i> Itálico</i></p>
+    </div>
+
+    <div class="div4">
+        <!-- IMAGENS-->
+        <h3 id="imagem">🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 TAGs de Imagens 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 </h3>
+
+        <p> 
+            A primeira forma é salvando uma imagem na pasta que vc criou para o arquivo HTML<br>
+            Após salvar a imagem aparecerá nos aquivos do VScode <br>
+            Para pegar essa imagem se usa a TAG <b>"img"</b> e <b>"src"</b>, após isso, para acessar a pasta coloque "./" e
+            aparecerá as
+            opções de pasta para buscar a imagem<br>
+            exemplo: img src="./imagens/logo devclub.png" 
+        </p>
+
+        <img src="../imagens/logo devclub.png" alt="Logo do DevClub">
+
+        <p> 
+            Para procurar img em pastas "a cima" depois de colocar "img src" vc coloca " ../ " exemplo: img
+            src="../imagens/logo devclub.png" (depois procura na pasta da mesma forma que antes) 
+        </p>
+        <!--Da pra ficar colocando ../ até buscar nos outros arquivos do computador-->
+        <p> 
+            Para mudar o tamanho da <b>altura</b> e <b>largura</b> da imagem usa-se os atributos <b>" width "</b> e <b>"
+                height "</b> dentro da TAG de "img", (usar um ou outro para não distorcer a imagem)
+            Exemplo: " img src="./imagens/logo devclub.png" alt="Logo do DevClub" width="200px" height="200px " " 
+        </p>
+        <p> 
+            Para colocar uma descrição na imagem usa-se <b>"alt="</b> tanto para se a imagem não carregar ter um texto
+            alternativo,
+            como para pessoas com deficiência visual para leitores de tela,
+            Exemplo: img src="./imagens/logo devclub.png" alt="Logo do DevClub"
+        </p>
+
+        <p> 
+            Existe também a TAG <b>"figure"</b> que serve para criar uma box para colocar uma legenda, e para isso de usa
+            <b>"figcaption"</b><br>
+            Exemplo: <br>
+            " < figure > <br>
+            < img src="./imagens/logo devclub.png" alt="Logo do DevClub" > <br>
+            < figcaption > Logo do DevClub < /figcaption > <br>
+            < /figure "
+        </p>
+        Exemplo:
+        
+        <figure>
+            <img src="../imagens/logo devclub.png" alt="Logo do DevClub">
+            <figcaption>Logo do DevClub</figcaption>
+        </figure>
+
+        <p> 
+            Agora se quiser buscar uma imagem direto da internet, você tem que usar a TAG " img " e dentro dela colocar o
+            atributo " src "
+            com o link da imagem, exemplo: img src="https://www.devclub.com.br/static/media/logo.9c8e1b0e.png" 
+        </p>
+
+        <!-- para dar reload no VSCode é "Ctrl+Shift P " reload -->
+    </div>
+
+    <div class="div5">
+        <!-- LINKS -->
+        <h3 id="link"> 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 TAGs para Link 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 </h3>
+
+        <p> 
+            Para criar um link, se usa a TAG " a ", e o atributo " href " para indicar como será esse link 
+            Se for um link normal para um site é " a href="https://www.google.com.br/" > Google /a "<br>
+            Exemplo <a href="https://www.google.com.br/"> Google </a> 
+        </p>
+
+        <p>
+            Agora se vc quiser criar um link abrindo uma nova aba , vc tem que usar o atributo " target=_balnk " exemplo: " a
+            href="https://www.google.com.br/" target="_blank" > Google /a "<br>
+            Exemplo: <a href="https://www.google.com.br/" target="_blank">Google </a> 
+        </p>
+        <!-- O target blank vc pode adicionar em qualquer link só seguir o mesmo princípio-->
+        <p> 
+            Se quiser criar um link para direcionar a pessoa a enviar um e-mail pra vc é " a
+            href="mailto:seuemail@exemplo.com" > Enviar um E-mail /a " <br>
+            Exemplo: <a href="mailto:seuemail@exemplo.com"> Enviar um E-mail </a> 
+        </p>
+
+        <p> 
+            Como o do e-mail, também há o de ligação q é " a href="tel:+551199220000" > Entrar em contato /a " <br>
+            Exemplo: <a href="tel:+5511992103553">Entrar em contato </a> 
+        </p>
+
+        <p> 
+            Também tem a opção de vc criar um link com uma própria página no site q vc esta criando no HTML, nesse caso é "
+            a href="../Outros/P�gina link.html" > Página do Link /a " <br>
+            Exemplo: <a href="../Outros/P�gina link.html"> Página do Link </a> 
+        </p>
+
+        <p> 
+            Para abrir uma nova aba nesse caso é só usar o target="_blank" depois de selecionar a pasta, exemplo: " a
+            href="../Outros/P�gina link.html" target="_blank" > Pág. do Link em uma nova aba /a " <br>
+            <a href="/Outros/Página link.html" target="_blank"> Pág. do link em uma nova aba </a>
+        </p>
+
+        <p> 
+            Também tem um link para navegar em partes específicas do site, mas para isso vc tem q criar id's no título (h1),
+            ou na frase (p) onde vc quer q o link vá (Dentro da TAG) exemplo " < h1 id="Texto> " <br>
+            Após a TAG crida é só colocar uma # para rastrear o id exemplo: " < a href="#Texto" > Ir para o Texto < /a> " <br>
+            Exemplo: <a href="#texto"> Ir para TAGs de Texto </a> ou <a href="#imagem"> Ir para TAGs de Imagem </a> 
+        </p>
+    </div>        
+
+    <div class="div6">
+            <!-- LISTA -->
+        <h3 id="lista"> 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 TAGs de Lista 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 </h3>
+
+        <p> 
+            Há dois tipos de listas, as Ordenadas e Não Ordenadas
+        </p>
+
+        <p> 
+            A lista ordenada coloca itens numerados, e para criar se usa a TAG " ol " para criar e nos itens coloca-se a TAG
+            " li " exemplo: <br>
+            < ol> <br>
+            < li Item 1 < /li> <br>
+            < li Item 2 < /li> <br>
+            < li Item 3 < /li> <br>
+            < /ol> <br>
+            
+            Exemplo:
+        <ol>
+            <li> Item 1 </li>
+            <li> Item 2 </li>
+            <li> Item 3 </li>
+        </ol>
+        </p>
+
+        <p> 
+            Para criar a lista Não Ordenada é a mesma coisa mas se usa a TAG " ul " para criar a lista, e a mesma fica em
+            tópicos e não numerada, exemplo: <br>
+
+            Exemplo:
+        <ul>
+            <li> Item 1 </li>
+            <li> Item 2 </li>
+            <li> Item 3 </li>
+        </ul>
+        </p>
+
+        <!-- ELEMENTOS ESTRUTURAIS-->
+        <h3 id="elementos-estruturais"> 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 TAGs para Elementos Estruturais e Semânticos 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄  </h3>
+
+        <p> 
+            Há certos elementos q serão principalmente usados na parte do CSS, a "div" e o "span" são exemplos desses
+            elementos 
+        </p>
+        <p> 
+            A <b>"div"</b> é uma TAG que cria uma caixa de organização, para depois na hora da edição vc conseguir dividir
+            cada elemento do site 
+        </p>
+        <p> 
+            O <b>"span"</b> é uma TAG que cria esse elemento de seleção de caixa dentro de uma palavra ou de uma frase mais
+            específica, também para facilitar na hora da edição 
+        </p>
+        <p>
+            Na ultima atualização do HTML surgiu as TAGs de elementos semânticos, como <b>"header"</b> para o cabeçalho do site, normalmente onde fica o menu de opções <b>"nav"</b> para a barra de navegação, <b>"main"</b> para 
+            o conteúdo principal do site, <b>"article"</b> para artigos ou notícias, <b>"section"</b> para seções do site, <b>"aside"</b> para conteúdos laterais <b>"footer"</b> para o rodapé do 
+            site. Esses elementos ajudam a organizar melhor o conteúdo e também melhoram o SEO do site, entenda melhor com a imagem abaixo: 
+        </p>
+        <img src="../imagens/html5 semantico.jpg" alt="Elementos Semânticos" height="300">
+        <p>
+            Mesmo com a criação desses elementos semânticos, as TAGs "div" são usadas para criar caixas de organização em cada um destes elementos que acabam facilitando a edição do site
+        </p>
+    </div>
+    
+    <div class="div7">
+        <!-- TABELA -->
+        <h3 id="tabela"> 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 TAGs de Tabela 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄</h3>
+
+        <p> 
+            Para criar uma tabela se usa a TAG <b>"table"</b> e dentro dela tem as TAGs <b>"tr"</b> para criar as linhas,
+            <b>"th"</b> para criar os
+            títulos das colunas e <b>"td"</b> para criar as células da tabela, exemplo: <br>
+            "< table> <br>
+            < tr> <br>
+            < th> Coluna 1 < /th> <br>
+            < th> Coluna 2 < /th> <br>
+            < /tr> <br>
+            < tr> <br>
+            < td> Célula 1 < /td> <br>
+            < td> Célula 2 < /td> <br>
+            < /tr> <br>
+            < /table>" <br>
+
+            Exemplo:
+            <table>
+                <tr>
+                    <th> Nome </th>
+                    <th> Idade</th>
+                    <th> Peso </th>
+                </tr>
+                <tr>
+                    <td> Cesar </td>
+                    <td> 28 anos </td>
+                    <td> 100kg </td>
+                </tr>
+                <tr>
+                    <td> Lucas </td>
+                    <td> 30 anos </td>
+                    <td> 98 kg </td>
+                </tr>
+            </table>
+        </p>
+
+        <p>
+            E para editar a tabela vc pode usar os parâmetros(dentro da TAG "table") <b>"border"</b> para borda,
+            <b>"bordercolor"</b> para cor da
+            borda, <b>"cellpadding"</b> para espaçar entre as células e <b>"cellspacing"</b> para espaçamento entre as
+            palavras.
+            Exemplo: <br>
+
+        <table border="2" bordercolor="blue" cellpadding="5" cellspacing="2">
+                <tr>
+                    <th> Nome </th>
+                    <th> Idade</th>
+                    <th> Peso </th>
+                </tr>
+                <tr>
+                    <td> Cesar </td>
+                    <td> 28 anos </td>
+                    <td> 100kg </td>
+                </tr>
+                <tr>
+                    <td> Lucas </td>
+                    <td> 30 anos </td>
+                    <td> 98 kg </td>
+                </tr>
+        </table>
+        </p>
+    </div>    
+
+    <div class="div8">
+        <!-- VÍDEO-->
+        <h3 id="vídeo">🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 TAGs de Vídeo 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄  </h3>
+
+        <p> 
+            Para colocar um vídeo no site se usa a TAG <b>"video"</b> e dentro dela o atributo <b>"src"</b> igual na imagem,
+            mesmo princípio 
+        </p>
+
+        <p> 
+            Para colocar os controles do vídeo se usa o atributo <b>"controls"</b> dentro da TAG "video" </p>
+
+        <p> Quando vc coloca os controles, da a opção de download do vídeo, para retirar essa opção se usa o atributo
+            <b>"controlsList="nodownload"</b>
+        </p>
+
+        <p> 
+            Opção de dar autoplay no vídeo se usa o atributo <b>"autoplay"</b>
+        </p>
+
+        <p> 
+            E algumas vezes o site bloqueia o video, uma forma de burlar isso é usando o atributo <b>"muted"</b> para tirar
+            o som do vídeo 
+        </p>
+
+        <p>
+            O tamanho do vídeo se edita usando os atributos <b>"width"</b> e <b>"height"</b> assim como ja vimos
+            anteriormente
+        </p>
+
+
+        <p>
+            Para colocar uma thumb no vídeo se usa o atributo <b>"poster="./pastadaimagem/thumbdovideo.jpg"" </b> dentro da
+            TAG 
+        </p>
+
+        <p> 
+            Exemplo: " video src="./pastadovideo/videoteste.mp4" controls controlsList="nodownload" autoplay muted
+            height="400" poster="./pastadaimagem/thumbdovideo.jpg"> /video>" 
+        </p>
+
+        <!-- Vou usar a função "figure" para colocar uma legenda abaixo do vídeo usando"figcaption"-->
+            <figure>
+
+                <video src="../imagens/video.mp4" controls controlsList="nodownload" muted height="400"
+                    poster="/imagens/Capa do vídeo.avif"> </video>
+
+                <figcaption style="text-align: center;">Vídeo de Teste (Tirei o autoplay para aparecer a thumb) </figcaption>
+
+            </figure>
+
+        <p> 
+            Vc pode colocar vários formatos de vídeos para evitar quais quer transtornos com os diferentes navegadores, para
+            isso é só colocar a TAG <b>"source"</b> dentro da TAG "video" <br>
+            Exemplo: <br>
+            " < video> <br>
+            source src="./pastadovideo/videoteste.mp4" <br>
+            source src="./pastadovideo/videoteste.mkv" <br>
+            source src="./pastadovideo/videoteste.mp5" <br>
+            < /video> "
+        </p>
+
+        <!-- I FRAME-->
+
+        <h3 id="iframe">🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 TAGs de Iframe 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 </h3>
+
+        <P> 
+            A TAG <b>"iframe"</b> é usada para colocar outros sites como o do YouTube ou Google Maps no seu site, como um
+            video do youtube ou uma janela do google maps.
+            Nestes sites citados vc acha nas opões de compartinhar o termo "incorporar" e o site te da o código pronto em
+            HTML 
+        </p>
+
+        <p> 
+            Assim como nas TAGs de imagem e vídeo vc consegue mudar o tamanho da largura, altura, borda, entre outras opções
+            <br>
+            Exemplo: " iframe src="link do site" width="560" height="315" frameborder="0" allowfullscreen> /iframe "
+        </p>
+
+        <p> 
+            Site normal: 
+        </p>
+        
+            <iframe src="https://www.devclub.com.br/" width="445" height="200">
+            </iframe>
+
+        <p>
+            Yotube e Google:
+        </p>
+
+        <div class="div8-1">
+            <iframe src="https://www.youtube.com/embed/1MysLou8lms?si=ZtiUAVd0g_0SVH8D" width="445" height="200"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen> 
+            </iframe>
+
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d32868.49797736851!2d-46.49356772716297!3d-23.44919019461002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce8af96f722a25%3A0x8071626c51a7154a!2sAeroporto%20Internacional%20de%20S%C3%A3o%20Paulo%2FGuarulhos%E2%80%93Governador%20Andr%C3%A9%20Franco%20Montoro!5e0!3m2!1spt-BR!2sbr!4v1773184374505!5m2!1spt-BR!2sbr"
+                width="445" height="200" style="border:0;" allowfullscreen="" loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+
+        <!-- INPUTS -->
+        <h3 id="input">🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 TAGs de INPUT 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄  </h3>
+
+        <p>
+            TAGs de <b>"input"</b> são usadas para criar espaços para escrever, como por exemplo em um formulário de endereço
+            ou uma barra de pesquisa, e essa TAG tem váriados tipos
+            diferentes de atributos, como:
+        </p>
+
+            <ul>
+                <li> Auto complete - Para dar a sugestão de completar com seus dados como em um cadastro = <b>autocomplete="street-address ou email ou name" </b> </li>
+                <li> Place holder - Para colocar um texto dentro do campo de escrita para dar a sugestão do que deve ser escrito =<b> placeholder="Texto" </b> </li>
+                <li> Desabled - Para desabilitar o campo de escrita = <b> disabled </b> <br> </li>
+                <li> Read only - Para deixar o campo de escrita somente leitura, ou seja, não pode ser editado = <b> readonly </b> </li>
+                <li> Value - Para colocar um texto dentro do campo de escrita = <b> value="Texto" </b> </li>
+                <li> Auto focus - Para colocar o foco automático no campo de escrita quando a página for carregada (Colocar em um só input pra ele focar)= <b> autofocus </b> </li>
+            </ul>
+
+        <p> 
+            Se vc usar o atributo <b> " type="" "</b> existem váriados tipos de input, como barras de pesquisa, telefone,
+            apenas links (URL) entre outros, como: 
+        </p>
+
+            <ul>
+                <li> <input type="color"> - color - Para escolher uma cor </li>
+                <li> <input type="date"> - date - Para escolher uma data </li>
+                <li> <input type="email" placeholder="exemplo@gmail.com.br"> - email - Para escrever um e-mail (tambei usei o "placeholder" ja como demonstração) </li>
+                <li> <input type="number"> - number - Para escrever apenas números </li>
+                <li> <input type="password"> - password - Para escrever uma senha (os caracteres ficam escondidos) </li>
+                <li> <input type="checkbox"> - checkbox - Para criar uma caixa de seleção</li>
+            </ul>
+
+        <p>
+            <input type="file"> - file - Para criar um campo para enviar arquivos <br>
+            No <b>"file"</b> tem alguns atributos útel como: <br>
+            <b>mutiple</b> - Para selecionar vários arquivos <br>
+            <b>accept="tipo do arquivo (.mp3 , .jpg , .mp4)"</b> - Para selecionar um arquivo específivo (Se colocar nas
+            aspas: video/* ou image/* ou audio/* ele pegar todos os tipos de arquivo da mídia escolhida)
+        </p>
+        <!-- Na programação, quando se coloca " /* " quer dizer: todos -->
+
+        <p>
+            O type <b>"radio"</b> consegue fazer esse tipo de seleção única com opções usando <b>"label"</b> <br>
+
+            <label for="face"> Facebook </label>
+            <input type="radio" id="face" name="redes sociais" />
+
+            <label for="insta"> Instagram </label>
+            <input type="radio" id="insta" name="redes sociais" />
+
+            <label for="tube"> YouTube </label>
+            <input type="radio" id="tube" name="redes sociais" />
+        </p>
+
+        <p> 
+            O <b>"label"</b> é usado para criar uma box para colocar o imput dentro como também uma descrição de endereço,
+            ex:
+            <label> Rua:
+                <input street-address> </input>
+            </label> <br>
+            Exemplo:<br>
+            "< label> Rua: <br>
+                < input type="text" autocomplete="street-address">
+                    < /input> <br>
+                        < /label> " <br>
+                            Outra opção: Seu input ja estiver criado vc pode usar o <b>" id="chave" "</b> no input para
+                            criar um link, e um <b>" for="chave" "</b> no label para linkar eles
+        </p>
+    </div>
+
+    <div class="div9">
+        
+        <h3 id="forms">🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 TAGs de FORMS 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄  </h3>
+
+        <p> 
+            A TAG <b>"form"</b> é usada para criar uma box de um formulário, e dentro dela normalmente vc encontra as TAGs
+            de "input" para criar os campos de escrita, de "label" para nomear os inputs, e
+            a TAG "button" para criar um botão de envio do formulário <br>
+            De acordo com as perguntas desse "form" vc cria os "inputs" necessários e específicos para cada resposta.
+            Exemplo:
+        </p>
+
+        <form>
+            <h5> Formulário de Cadastro</h5>
+
+            <label> Nome <input type="name" autocomplete="name"> </label> <br>
+            <label> Idade <input type="number"> </label> <br>
+            <label> E-mail <input type="email" autocomplete="email"> </label> <br>
+            <label> Cor preferida <input type="color"> </label> <br>
+            <label> Marque se for humano <input type="checkbox"> </label> <br>
+
+            <button type="submit"> ENVIAR </button> <button type="reset"> RESETAR </button>
+        </form>
+
+        <p> 
+            Atributos úteis para os formulários: 
+        </p>
+
+        <ul> 
+            <li> Action - Para indicar para onde os dados do formulário serão enviados, exemplo: <b> action="https://www.exemplo.com.br"</b> </li>  
+            <li> Method - Para indicar o método de envio dos dados, os mais comuns são "GET" (Envia pela os dados pela URL) e "POST" (Para enviar dados sensíveis), exemplo: <b> method="POST" </b> </li>
+            <li> Enctype - Para indicar o tipo de codificação dos dados, principalmente quando se tem arquivos para enviar, exemplo: <b> enctype="multipart/form-data" </b> (Usado para enviar arquivos) </li>
+            <li> Button type reset - Para criar um botão de resetar o formulário (Apagar todos os dados), exemplo: <b> type="reset" </b> </li>
+        </ul>
+    </div>
+
+<button class="b-end"> <a href="#titulo"> Voltar para o começo  </a> </button>
+
+</body>
+
+</html>

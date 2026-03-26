@@ -1,0 +1,186 @@
+
+body{
+    font-family: "Space Grotesk", sans-serif;
+}
+
+p{
+    line-height: 25px;
+    text-indent: 3em;
+}
+
+div{
+    margin: 50px;
+}
+
+#titulo{
+font-family: "Datatype", monospace;
+font-size: 85px;
+text-align: center;
+} 
+
+h3{
+    font-family: 'Overpass Mono', monospace;
+    text-align: center;
+    font-size: 30px;
+}
+
+.divbutton{
+    a{
+        color: black;
+        text-decoration: none;
+        margin: 0 30px;
+    }
+    .button, .button2{
+        margin: 0 60px;
+    }
+}
+
+.button:hover, .button2:hover{
+    opacity: 0.8;
+}    
+
+.button{
+cursor: pointer;
+background-color: #C2C2C2;
+border-radius: 25px;
+font-size: 30px;
+filter: drop-shadow(0px 0px 5px #191919);
+font-family: "Datatype", monospace;
+}
+
+.button2{
+cursor: pointer;
+background-color: #C2C2C2;
+border-radius: 25px;
+font-size: 30px;
+filter: drop-shadow(0px 0px 5px #191919);
+font-family: "Datatype", monospace;
+}
+
+header ul{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    padding: 0;
+    margin: 0 50px;
+}
+
+header li{
+    margin: 0;
+}
+
+header a{
+    font-family: 'Overpass Mono', monospace;
+    font-weight: 700;
+    font-size: 22px;
+    text-decoration: none;
+    color: #ffffff;
+    padding: 6px 10px;
+    border: 3px solid #000000;
+    border-radius: 8px;
+    display: inline-block;
+    background-color: #F15025;
+}
+
+header a:hover{
+    opacity: 0.8;
+}
+
+/* NOVAS FUNÇÕES */
+.div1-1{
+    position:absolute; /*Com essa função é possível sobrepor camadas*/
+    background-color: rgb(214, 230, 1);
+    width: 60px;
+    height: 70px;
+    opacity: 50%;
+}
+
+.div1-2{
+    
+    background-color: rgb(55, 45, 202);
+    width: 100px;
+    height: 50px;   
+}
+
+/*PSEUDO ELEMENTOS*/
+
+.inp2::placeholder{
+    color: blue;
+    font-weight:bold;
+}
+
+#p1::first-letter {
+    color: blue;
+    font-weight:bold;
+    font-size: 30px;
+}
+#a1{
+    font-size: 25px;
+}
+
+#a1::after{
+    content: "🚀";
+    
+}
+
+#a1::before{
+    content:"🚀" ;
+}
+
+/*RESPONSIVIDADE */
+
+.div5-2{
+    width: 1000px;
+    height: 100px;
+    background-color: rgb(156, 182, 231);
+    line-height: 30px;
+ 
+}
+
+@media (max-width:1000px) {
+.div5-2{
+    width: 550px;
+    height: 80px;
+    background-color: rgb(150, 252, 137);
+}
+}
+
+.b-end3{
+    font-family: 'Overpass Mono', monospace;
+    font-weight: 700;
+    font-size: 22px;
+    padding: 6px 10px;
+    border: 3px solid #000000;
+    border-radius: 8px;
+    background-color: #F15025;
+    margin-left: 1350px;
+}   
+
+.b-end3 a{
+    color: #ffffff;
+    text-decoration: none;  
+}
+
+.b-end3:hover{
+    opacity: 0.8;
+}
+
+/* POSIÇÕES */
+.buttonp{
+    font-family: 'Overpass Mono', monospace;
+    font-weight: 400;
+    font-size: 18px;
+    padding: 2px 5px;
+    border: 2px solid #000000;
+    border-radius: 8px;
+    background-color: #F15025;
+   
+}   
+
+.buttonp a{
+    color: #ffffff;
+    text-decoration: none;     
+}
+

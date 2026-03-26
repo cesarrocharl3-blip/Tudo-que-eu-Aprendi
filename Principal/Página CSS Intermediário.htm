@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles-CSS-intermediário.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Datatype:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@700&display=swap" rel="stylesheet">
+
+    <title>CSS Parte2 - Intermediário</title>
+</head>
+<body>
+   
+<div>
+        <h1 id="titulo"> CSS intermediário </h1>
+
+        <p>
+            Vamos começar o 2º módulo de CSS, agora vai ficar um pouco mais difícil, ou será que não...  
+        </p>
+</div>
+
+
+
+<div class="divbutton">
+            <h2>Veja também > > </h2>
+            <button class="button"> <a href="/Principal/Página do HTML.html"> HTML </a> </button>
+            <button class="button"> <a href="/Principal/Página do CSS.html"> CSS </a> </button>
+            <button class="button2"> <a target="_blank" href="/Desafio do CSS/desafio2.html"> Pág. Desafio 2 </a> </button>
+</div>
+
+<div>
+    
+<h2> Links dos Tópicos > > >  </h2>
+
+    <header>
+         
+        <ul>
+            <li> <a href="#novasfuncoes">Novas Funções</a> </li>
+            <li> <a href="#posicoes">Posições</a></li>
+            <li> <a href="#pseudoe">Pseudo Elementos</a></li>
+            <li> <a href="#pseudoc">Pseudo Classes</a></li>
+            <li> <a href="#responsividade">Responsividade</a></li>
+        </ul>
+    </header>
+
+</div>
+
+   <div class="div1">
+        <h3 id="novasfuncoes">  🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 Novas Funções 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄  </h3>
+
+            <p>
+                <b>Important</b> - Vamos começar com uma função q é a <b>!important</b>, é uma função que vai dentro de um atributo do CSS, e serve para sobrepor qualquer outro comando realizado 
+                anteriormente, por exemplo, se vc mudar a cor de um título com uma função <b> *{  } </b> e depois em um outro título quiser colocar uma cor diferente, basta usar essa função <br>
+                Ex: A "box1" está com uma opacidade de 50%, <br>
+                #titulo{ color: #FF6568 <b>!important</b>; }
+            </p>
+
+            <p>
+                <b>Opacity</b> - É uma função para deixar um item transparênte <br>
+                Ex: Eu coloquei uma opacidade de 50% na caixa amarela (box1).
+                    <div class="div1-1"> box1 </div> 
+                    <div class="div1-2">   </div>       <br>
+            </p>
+
+            <p>
+                <b>Calc</b> - É uma função para fazer um cálculo, usado para especificar um tamanho que necessite de algum calculo, exemplo: <br>
+                widith: calc(100vw - 200px); (Você ta dizendo que o width vai ser 100% da tela menos 200px)
+            </p>
+
+    </div>
+
+   <div class="div2">
+        <h3 id="posicoes">  🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 Posições 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄  </h3>
+
+            <p>Existem diversas formas de você conseguir mover seus elementos, uma delas é a função <b>top, rigth, left e botton</b> porém só é possivel usar essas funções em certas ocasiões,
+                normalmente usadas quando se usa a função "positions" determinar a posição desses elementos, essas funções são para: <br>
+                <b>position: static; (padrão)</b> - É a função padrão que já vem configurado no VSCode, não aceita valores diretos de top, botton, rigth e left <br>
+                <b>position: fixed;</b> - Fixa o elemento na tela independente da rolagem do site, não se move de lugar <br>
+                <b>position: sticky;</b> - Ele se atrela a uma margem definida, porém não sai da tela inicial, por exemplo quela barra de menu que fica na tela e ela rola com o 
+                conteúdo, porém quando ela vai sair da tela ela não sai e fica sempre na parte superior, isso é devido a essa função "sticky" <br>
+                <b>position: relactive;</b> - Altera a posição do elemento em relação a posição inicial dele <br>
+                <b>position: absolute;</b> - Posiciona referente a um elemento, ou a página, se não estiver dentro de um elemento ou se o elemento for "static" (padrão) pisiciona referente a 
+                página, agora se estiver dentro de um elemnto não "static", posiciona referente ao elemento  <br>
+                <br>
+                Clique no botão e veja a diferença >>> <button class="buttonp"> <a href="/Outros/exemplo-position.html" target="_blank"> Página de Exemplo </a> </button>
+            </p>
+    </div>
+
+    <div class="div3">
+        <h3 id="pseudoe"> 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 Pseudo Elementos 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 </h3>
+
+        <p>
+            São formas de edição para partes de um elemento, detalhes dentro de um elemento, para escrever se coloca dois, dois pontos <b>(::)</b> após a TAG de identificação exemplos: <br>
+
+            Edição da escrita dentro de um input por exemplo:
+            <input class="inp1" placeholder="Exemplo de como é"> é possível fazer isso >> <input class="inp2" placeholder="Exemplo de como pode ficar"> <br>
+            fica:<b>input::placeholder { color: blue;  font-weight:bold; } </b> <br>
+            
+            Também é possível alterar só a primeira letra do parágrafo <b>(first-letter)</b>, ou a primeira linha <b>(first-line)</b> <br>
+            <p id="p1">
+                Exemplo: p::first-letter { color: blue;  font-weight:bold;  font-size: 30px;} <br>
+            </p>
+
+            E por último o <b>before</b> e <b>after</b> q serve para vc escrever algo antes e após um elemento, por exemplo em um link: <br>
+            <a href="nada" id="a1">Exemplo de link</a> fica:  <b>a::after{ content: "🚀"; } a::before{ content:"🚀" ; } </b>
+        </p>
+    </div>
+
+    <div class="div4">
+        <h3 id="pseudoc">  🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 Pseudo Classes 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄  </h3>
+
+        <p>
+            As <b>pseudo classes</b> são parecidas com os pseudo elementos, servem para colocar elementos de edição dentro de TAG's específicas, e diferente do que vimos no 
+            pseudo elemento para escrever esse código usa-se apenas um <b>":"</b> exemplos: <br>
+            <b>:active</b> → quando o elemento está ativo, ou seja, está sendo pressionado (clicado) <br>
+            <b>:visited</b> → seleciona o link que foi visitado (tipo os links do google q ficam roxos) <br>
+            <b>:hover</b> → quando o mouse passe em cima do elemento, pode ser botão, texto, entre outros <br>
+            <b>:checked</b> → usado para editar os inputs > radio / checkbox / select <br>
+            <b>:disabled</b> → elemento desabilitado, só parea desabilitar / button / input <br>
+            <b>:enabled</b> → elemento está habilitado, para habilitar <br>
+            <b>:focus</b> → é aplicada quando um elemento recebe foco, o que pode ocorrer quando o usuário clica no elemento tipo em um input <br>
+            <b>:read-only</b> → seleciona input ou textarea que são apenas leitura <br>
+            <b>:empty</b> → aplica a edição em elemntos vazios <br>
+
+            <b>:first-child</b> → para estilizar apenas o primeiro elemento ex: primeira li de uma ul / primeiro span de uma div <br>
+            <b>:first-of-type</b> → estiliza o primeiro elemento de seu tipo  <br>
+            <b>:last-child</b> → último filho <br>
+            <b>:last-of-type</b> → estiliza o último elemento de seu tipo <br>
+            <b>:not()</b> → estiliza todos elementos, exceto o que esta dentro dos parênteses <b>()</b><br>
+            <b>:nth-child()</b> → seleciona o elemento baseado na sua posição, tipo o first e last mas é específico para qual vc quer. Ex: :nth-child(3) <br>
+            <b>:nth-last-child()</b> → igual o de cima mas conta de trás para frente. <br>
+        </p>
+    </div>
+
+    <div class="div5">
+        <h3 id="responsividade"> 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 Responsividade 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 </h3>
+
+        <p>
+            Responsividade nada mais é do que a adaptação da tela grande (PC), para uma tela pequena (celular), pricipalmente na questão questão de tamanhos e 
+            proporções dos elementos do seu site, para isso usamos a função <b>@media ()</b> <br>
+            Com essa função você pode determinar quais elemtos vc quer que mude de acordo com um certo parâmetro, por exemplo a largura da tela em pixel, para isso 
+            basta colocar: <br>
+            <b>@media (max-width:600px) {dentro dos colchetes vc coloca os elementos que mudarção de acordo com esse tamanho (div, p, img...) }</b>
+            Essa função acompanha principalmente duas opções de atributos: @media <b>(max-width:1000px)</b> ou <b>(min-width:1000px)</b> <br>
+                <ul>
+                    <li><b>max-width: 500 px</b> - Quando se usa o @mídia com o max, quer dizer que até atingir 500px vai ficar com a config. padrão, se diminuir a partir
+                    dos 500px, ou seja a partir de 499px já entra a config. que está dentro da @media  </li>
+                    <li><b>(min-width: 500 px)</b> - O "min" ja é o contrário, até os 500px vai manter na config. padrão, a partir disso já altera a configuração para 
+                    o que está dentro da @media</li> 
+                </ul>
+            Exemplo: 
+        </p>
+       
+        <p>
+            <b>Essa div está com essa config. abaixo:</b> <br>
+            .div5-1 { <br>
+            width: 1000px; <br>
+            height: 100px; <br>
+            background-color: blue;  }
+        </p>
+
+        <div class="div5-2"> 
+            DIMINUA O TAMANHO DA JANELA DO SITE PARA VER <br> 
+            A FUNÇÃO <b>@MEDIA</b> EM AÇÃO 
+        </div>
+        
+        <div class="div5-3"> <b> Agora se eu aplicar um @midia com max de 1000px quer dizer que ao diminuir menos de 1000px ela trocará para essa config. abaixo:</b> <br>
+                @media (max-width:1000px) { <br>
+                .div5-1{ <br>
+                width: 400px; <br>
+                height: 80px; <br>
+                background-color: green;  }  } 
+        </div>
+        <p>
+            Normalmente ao colocar @media se coloca: @media <b>screen</b> and (max-width:1000px) and <b>(orientation: landscape ou portrait)</b> <br>
+            O screen serve para especificar mais onde será aberto o site, além de portrait ou landscape que é o formato de retrato, ou paisagem (não esquecer de colocar o and)
+
+        </p>  
+    </div>
+
+    <button class="b-end3"> <a href="#titulo"> Voltar para o começo  </a> </button>
+
+
+</body>
+</html>
