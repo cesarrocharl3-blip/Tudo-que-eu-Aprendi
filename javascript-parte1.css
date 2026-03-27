@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Space Grotesk", sans-serif;
+}
+
+div{
+    margin: 50px;
+}
+
+.titulo{
+font-family: "Datatype", monospace;
+font-size: 85px;
+text-align: center;
+} 
