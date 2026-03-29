@@ -9,7 +9,7 @@ div{
     margin: 50px;
 }
 
-.titulo{
+#titulo{
 font-family: "Datatype", monospace;
 font-size: 85px;
 text-align: center;

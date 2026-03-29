@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="javascript-parte1.css">
+    <link rel="stylesheet" href="styles-javascript.css"
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Datatype:wght@100..900&display=swap" rel="stylesheet">
@@ -14,14 +14,152 @@
 </head>
 <body>
     <div>
-        <h1 class="titulo"> Começando a aprender Java Script - Parte 1</h1>
-    </div>
+        <h1 id="titulo"> Aprendendo Java Script Parte 1 </h1>
 
-    <h3> GitHub </h3>
+        <p>
+            Agora vamos começar a realmente nos sentirmos programadores, pois finalmente vamos aprender uma lingagem de programação, o Java Script, bora que ta só
+            começando !
+        </p>
+</div>
+
+
+
+<div class="divbutton">
+    <h2>Veja também > > </h2>
+    
+    <button class="button"> <a href="index.html"> HTML </a> </button>
+    <button class="button"> <a href="Página do CSS.html"> CSS </a> </button>
+    <button class="button2"> <a target="_blank" href="Desafio do CSS/desafio2.html"> Pág. Desafio 2 </a> </button>
+</div>
+
+<div>
+    
+<h2> Links dos Tópicos > > >  </h2>
+
+    <header>
+         
+        <ul>
+            <li> <a href="#novasfuncoes">Novas Funções</a> </li>
+            <li> <a href="#posicoes">Posições</a></li>
+            <li> <a href="#pseudoe">Pseudo Elementos</a></li>
+            <li> <a href="#pseudoc">Pseudo Classes</a></li>
+            <li> <a href="#responsividade">Responsividade</a></li>
+        </ul>
+    </header>
+
+</div>
+
+<div class="div0">
+ <h3>  🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 Introdução ao JavaScript 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄  </h3>
+
+    <p> 
+        Daqui em diante é muito importante saber o conceito de <b>Lógica de Programação</b> e <b>Algoritmos</b>, a lógica de programação nada mais é que a forma de pensar
+        para resolver um problema, entender como, com base no conhecimento de como a ferramenta funciona, fazer com que você transforme sua idéia em realidade, ou resolver um
+        problema dado. <br>
+        Já os algoritmos são um conjunto de regras ou instruções que devem ser seguidas para que com ajuda da lógica de programação, seja possível essa realização, ou seja as 
+        instruçoes que devem ser seguidas para vc se comunicar com o a feramenta. <br>
+
+        <b>Obs:</b> <br>
+        Abrir console no VSCode: Ctrl + Alt + N <br>
+        O <b>console.log("oq vc quiser escrever") </b> é a função mais básica do Java Script, ela serve para escrever algo no console.<br>
+
+
+
+
+
+
+    </p>
+</div>    
+
+<div class="div1">
+     <h3>  🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 Variáveis 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄  </h3>
+
+     <p>
+        As variáveis nada mais é que um espaço na memória do seu computador, onde vc pode armazenar qualquer informação, pode ser um número, uma frase, uma imagem, qualquer coisa
+        E as elas são: <br>
+        <b>let</b> - São constantes que PODEM ser ALTERADAS   <br> 
+        <b>const</b> - São CONSTANTES que não podem ser alteradas    <br>
+        <b>var</b> - São constantes que NÃO ESTÃO MAIS EM USO, ou seja NÃO É PARA USAR MAIS <br> 
+        Exemplo: <br>
+        <div class="code">
+            let (nome da variável) = (valor da variável) <br>
+            let quantidadeDeAlunosNaTurma = 30 <br>
+        </div>
+        <b>Obs:</b> Veja que o nome da váriavel começa com letra minúscula, e quando tem mais de uma palavra, a primeira letra de cada palavra é maiúscula para diferencia-la, isso por que
+        não pode haver espaço no nome da variável, nem começar com número ou caracteres especiais. Também não pode haver duas variáveis com o mesmo nome.
+     </p>
+</div>
+ 
+
+<div class="div2">
+
+    <h3>  🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 Conceitos Básicos 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄  </h3>
+
+    <h4> String - Textos </h4>
 
     <p>
-        Git e GitHub
+        Podemos escrever no JS com "aspas duplas" , 'aspas simples' ou `crase` , a diferença é que com as aspas duplas ou simples, não é possível quebrar linha, já com a crase é possível, e 
+        além disso, com a crase é possível usar expressões dentro do texto. <br>
+        "Texto com aspas duplas"<br>
+        'Texto com aspas simples'<br>
+        `Texto com crase` <br>
     </p>
+
+    <h4> Template Strings ou Templates Literals </h4>
+
+    <p>
+        As template strings são uma forma de escrever texto usando a <b>crase</b> onde você pode colocar elementos de código dentro, e para isso se usa <b>${variável}</b>, exemplo: <br>
+           <div class="code">
+            const idade = 28 <br>
+            const carro = "Fusca" <br>
+            console.log(`Eu tenho ${idade} anos e meu carro é um ${carro}, estamos no ano de ${2000 + 26}.`) <br>
+            Com isso será impresso no console: "Eu tenho 28 anos e meu carro é um Fusca, estamos no ano de 2026." <br>
+           </div>
+        
+    </p>
+
+    <h4> Numbers </h4>
+
+    <p>
+        Os numeros no JS podem ser inteiros ou decimais (3.14) e podem ser usados para contas ou apenas textos, exemplo: <br>
+           <div class="code">
+            const idade2 = "28" <br>
+            const conta = 30 + 20 <br>
+            console.log(`Minha idade ${idade2} e ${conta}`) <br>
+            Com isso é impresso no console: "Minha idade 28 e 50" <br>
+           </div>
+     
+        <b>Obs:</b>Repare que para fazer a conta não se usa aspas, para o JS entender que vc quer a conta, e nao o texto, e a const "idade2" está com o dois pois ja usamos a variável "idade" para 
+        o exemplo anterior então não podemos repetir o nome da variável.
+
+    </p>
+</div>
+
+<div class="div3">
+    <h3> Numbers </h3>
+
+    <p>
+       
+    </p>
+</div>
+
+<div class="div2">
+    <h3> String - Textos </h3>
+
+    <p>
+       
+    </p>
+</div>
+
+<div class="div2">
+    <h3> String - Textos </h3>
+
+    <p>
+       
+    </p>
+</div>
+
+
     
 </body>
 
