@@ -1,4 +1,4 @@
-# 🚀 Meu Primeiro Projeto Web (HTML + CSS)
+# 🚀 Meu Primeiro Projeto Web (HTML + CSS + JavaScript)
 Estou começando na área de programação.  
 Esse é só o começo — bora evoluir!
 --
