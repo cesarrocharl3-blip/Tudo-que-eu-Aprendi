@@ -9,6 +9,14 @@ div{
     margin: 50px;
 }
 
+.code{
+    background-color: rgb(216, 216, 216);
+    font-size: 18px;
+    width: fit-content;
+    margin: 10px;
+    font-family: "Datatype", monospace;
+}
+
 #titulo{
 font-family: "Datatype", monospace;
 font-size: 85px;

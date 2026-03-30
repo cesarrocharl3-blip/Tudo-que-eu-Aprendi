@@ -1,5 +1,5 @@
 
-
+// crase = Fn + Esc //
 /* Abrir console no VSCode: Ctrl + Alt + N */
 
 console.log("Olá, mundo!"); //Código para escrever algo no console//
@@ -36,4 +36,33 @@ console.log(`Eu tenho ${idade} anos e meu carro é um ${carro}, estamos no ano d
 const idade2 = "28" 
 const conta = 30 + 20 
 
-console.log(`Minha idade ${idade2} e ${conta}`) 
+console.log(`Minha idade ${idade2} e ${conta} reais na conta`) 
+
+//Objetos//
+
+const usuario1 = {
+    nome: "Cesar",
+    idade: 28,
+    email: "cesar@gmail.com",
+}
+console.log(usuario1);
+
+console.log(usuario1.idade);
+console.log(usuario1.nome.idade);
+
+// Objetos dentro de Objetos//
+
+const usuario2 = {
+    nome: "Cesar",
+    idade: 28,
+    email: "cesar@gmail.com",
+    endereco: {
+        rua: " Rua Brasil",
+        numero: 87,
+        cidade: "Guarulhos",
+        estado: "SP",}
+}
+
+console.log(usuario2);
+
+

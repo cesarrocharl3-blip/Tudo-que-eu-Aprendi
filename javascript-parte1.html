@@ -125,39 +125,68 @@
            <div class="code">
             const idade2 = "28" <br>
             const conta = 30 + 20 <br>
-            console.log(`Minha idade ${idade2} e ${conta}`) <br>
-            Com isso é impresso no console: "Minha idade 28 e 50" <br>
+            console.log(`Minha idade ${idade2} e ${conta} reais na conta`) <br>
+            Com isso é impresso no console: "Minha idade 28 e 50 reais na conta" <br>
            </div>
      
         <b>Obs:</b>Repare que para fazer a conta não se usa aspas, para o JS entender que vc quer a conta, e nao o texto, e a const "idade2" está com o dois pois ja usamos a variável "idade" para 
         o exemplo anterior então não podemos repetir o nome da variável.
 
     </p>
+
+    <h4> Null e Undefined </h4>
+
+    <p>
+        O <b>null</b> é o valor que uma variável tem quando ela nao tem nada, ou seja está sem resposta, exemplo: <br>
+        <b>let variavel = null</b> <br>
+        Já o <b>undefined</b> aparece quando uma variável é declarada, mas não tem valor atribuido, ou seja, ela existe, é como se fosse uma mensagem de erro.
+    </p>
+    
 </div>
 
 <div class="div3">
-    <h3> Numbers </h3>
+    <h3>  🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 Objetos 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄  </h3>
 
     <p>
-       
+       São grupos de informações relacionadas a uma variável, por exemplo, um cadastro de um usuário, onde ao invés de criar uma variável para cada informação do usuário, como nome, idade, email, etc, podemos
+       <b>criar um objeto</b> e dentro dele <b>colocar todas essas informações</b>, ao fazer isso, se você der um console.log no objeto, ele vai imprimir todas as informações desse objeto, exemplo: <br>
     </p>
-</div>
+       <div class="code">
+        const usuario1 = { <br>
+        nome: "Cesar", <br>
+        idade: 28, <br>
+        email: "cesar@gmail.com", <br>
+        } <br>
+        </div>
+    <p>
+        <b>Obs:</b> Você consegue buscar apenas <b>informação especifica do objeto</b> se quiser, basta colocar o ponto e a variável desejada, <b>console.log(usuario1.idade)</b> também da para adicionar mais 
+        informações apenas colocando o ponto e a variável que escolher, exemplo: <b>console.log(usuario1.nome.idade)</b> e assim por diante.
+    </p>
 
-<div class="div2">
-    <h3> String - Textos </h3>
+    
+    <h4> Objetos dentro de Objetos </h4>
 
     <p>
-       
+        Você também pode criar objetos dentro de objetos, normalmente para organizar melhor as <b>informações com mais informações dentro</b>, como por exemplo, um endereço, onde você tem o nome da rua, 
+        numero, cidade, estado, etc, isso facilita na hora de buscar informações com o console.log. Para fazer isto basta abrir uma nova chave após a variável ( endereço: {novas variáveis}) exemplo: <br>
     </p>
-</div>
-
-<div class="div2">
-    <h3> String - Textos </h3>
-
+        <div class="code">
+        const usuario2 = { <br>
+        nome: "Cesar", <br>
+        idade: 28, <br>
+        email: "cesar@gmail.com", <br>
+        <b>endereco: {</b> <br>
+        rua: " Rua Brasil", <br>
+        numero: 87, <br>
+        cidade: "Guarulhos", <br>
+        estado: "SP",} <br>
+        <b>}</b> <br>
+        </div>
     <p>
-       
+        <b>Obs:</b> Você pode <b>alterar as informaçõe do objeto</b>, mesmo que ele seja uma variável <b>const</b> basta colocar o nome da variável const + ponto + variável que deseja alterar = "novo valor", 
+        exemplo: <b>usuario2.nome = "Cesar Rocha"</b> ou <b>usuario2.endereco.cidade = "Sao Paulo"</b>
     </p>
-</div>
+
 
 
     
