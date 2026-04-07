@@ -1,5 +1,5 @@
 
-// crase = Fn + Esc //
+// crase = Fn + Esc ou A tecla do lado direito do P //
 /* Abrir console no VSCode: Ctrl + Alt + N */
 
 console.log("Olá, mundo!"); //Código para escrever algo no console//
@@ -38,6 +38,14 @@ const conta = 30 + 20
 
 console.log(`Minha idade ${idade2} e ${conta} reais na conta`) 
 
+// Functions //
+
+function Cheguei() {
+    console.log("Olá, seja bem-vindo!");
+}
+// Para executar a função, basta "chamar-la" ex://
+Cheguei();
+
 //Objetos//
 
 const usuario1 = {
@@ -48,7 +56,7 @@ const usuario1 = {
 console.log(usuario1);
 
 console.log(usuario1.idade);
-console.log(usuario1.nome.idade);
+console.log(usuario1.nome);
 
 // Objetos dentro de Objetos//
 
@@ -65,4 +73,44 @@ const usuario2 = {
 
 console.log(usuario2);
 
+//Arrays//
+
+const arrayUsuarios = [
+    {
+        nome: "Cesar",
+        idade: 28,
+    },
+    {
+        nome: "Lucas",
+        idade: 30,
+    },
+    {
+        nome: "Pedro",
+        idade: 29,
+    }
+]
+console.log(arrayUsuarios);
+
+arrayUsuarios[0].nome = "Cesar Rocha"
+
+console.log(arrayUsuarios);
+
+//If e Else//
+
+const notaAluno1 = 7
+const notaDeCorte = 5
+
+//Se for só duas respostas usar só IF e ELSE agr se for 3 ou mais usar IF igual fiz abaixo://
+
+if (notaAluno1 > notaDeCorte) {
+    console.log("Aluno aprovado!");
+}
+
+if (notaAluno1 < notaDeCorte) {
+    console.log("Aluno reprovado!");
+}
+
+if (notaAluno1 == notaDeCorte) {
+    console.log("Aluno aprovado por pouco!");
+}
 

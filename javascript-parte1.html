@@ -3,17 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles-javascript.css"
+    <link rel="stylesheet" href="styles-javascript.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Datatype:wght@100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@700&display=swap" rel="stylesheet">
+    <!-- Link para ligar o JavaScript ao HTML -->
+    <script src="JavaScript.js" defer></script>
+   
 
     <title>Java Script Parte 1</title>
     
 </head>
 <body>
-    <div>
+
+<div>
         <h1 id="titulo"> Aprendendo Java Script Parte 1 </h1>
 
         <p>
@@ -63,11 +67,8 @@
         Abrir console no VSCode: Ctrl + Alt + N <br>
         O <b>console.log("oq vc quiser escrever") </b> é a função mais básica do Java Script, ela serve para escrever algo no console.<br>
 
-
-
-
-
-
+        Para fazer a junção do HTML com o Java Script, basta criar um arquivo .js e colocar o código do Java Script no head do HTML. exemplo: <b> < script src="JavaScript.js" > < script/> </b> <br>
+        Obs: Dependendo do uso é possível que o código esteja depois do body.
     </p>
 </div>    
 
@@ -129,7 +130,7 @@
             Com isso é impresso no console: "Minha idade 28 e 50 reais na conta" <br>
            </div>
      
-        <b>Obs:</b>Repare que para fazer a conta não se usa aspas, para o JS entender que vc quer a conta, e nao o texto, e a const "idade2" está com o dois pois ja usamos a variável "idade" para 
+        <b>Obs:</b>Repare que para fazer uma conta matemática não se usa aspas, isso para o JS entender que vc quer a conta e nao um texto, e a const "idade2" está com o dois pois ja usamos a variável "idade" para 
         o exemplo anterior então não podemos repetir o nome da variável.
 
     </p>
@@ -141,10 +142,33 @@
         <b>let variavel = null</b> <br>
         Já o <b>undefined</b> aparece quando uma variável é declarada, mas não tem valor atribuido, ou seja, ela existe, é como se fosse uma mensagem de erro.
     </p>
-    
+
+    <h4> Boolean </h4>
+
+    <p>
+        O <b>boolean</b> é um tipo de dado que só pode ter dois valores: <b>true</b> (verdadeiro) ou <b>false</b> (falso), ele é muito usado para fazer comparações e tomar decisões no código, exemplo: <br>
+        <div class="code">
+        const maiorDeIdade = true <br>
+        const menorDeIdade = false <br>
+        </div>
+    </p>
+
+    <h4> Functions </h4>
+
+    <p>
+        As funções são trechos de código que só são executados quando são chamadas, elas são usadas para organizar o código e evitar repetições, e para criar uma função basta usar a palavra <b>function</b>
+        + nome da função + parênteses + chaves, exemplo: <br>
+
+        <div class="code"> 
+            function Cheguei() { console.log("Olá, seja bem-vindo!"); } <br>
+            <b>Para executar esta função basta usar:</b> Cheguei()
+        </div>
+    </p>
+
 </div>
 
 <div class="div3">
+
     <h3>  🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 Objetos 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄  </h3>
 
     <p>
@@ -152,11 +176,13 @@
        <b>criar um objeto</b> e dentro dele <b>colocar todas essas informações</b>, ao fazer isso, se você der um console.log no objeto, ele vai imprimir todas as informações desse objeto, exemplo: <br>
     </p>
        <div class="code">
+
         const usuario1 = { <br>
         nome: "Cesar", <br>
         idade: 28, <br>
         email: "cesar@gmail.com", <br>
         } <br>
+
         </div>
     <p>
         <b>Obs:</b> Você consegue buscar apenas <b>informação especifica do objeto</b> se quiser, basta colocar o ponto e a variável desejada, <b>console.log(usuario1.idade)</b> também da para adicionar mais 
@@ -171,6 +197,7 @@
         numero, cidade, estado, etc, isso facilita na hora de buscar informações com o console.log. Para fazer isto basta abrir uma nova chave após a variável ( endereço: {novas variáveis}) exemplo: <br>
     </p>
         <div class="code">
+
         const usuario2 = { <br>
         nome: "Cesar", <br>
         idade: 28, <br>
@@ -179,17 +206,122 @@
         rua: " Rua Brasil", <br>
         numero: 87, <br>
         cidade: "Guarulhos", <br>
-        estado: "SP",} <br>
+        estado: "SP", } <br>
         <b>}</b> <br>
+        
         </div>
     <p>
         <b>Obs:</b> Você pode <b>alterar as informaçõe do objeto</b>, mesmo que ele seja uma variável <b>const</b> basta colocar o nome da variável const + ponto + variável que deseja alterar = "novo valor", 
         exemplo: <b>usuario2.nome = "Cesar Rocha"</b> ou <b>usuario2.endereco.cidade = "Sao Paulo"</b>
     </p>
 
+</div>
 
+<div class="div4">
 
+    <h3>  🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 Array 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄  </h3>
+
+    <p>
+        Uma <b>array</b> é como se fosse uma box de informações para facilitar a organização de dados relacionados, assim como facilitar posteriormente na busca e edição desses itens dentro da array, e 
+        dentro dela é possível colocar qualquer tipo de informação, como números, textos, objetos, outras arrays, etc, e para criar uma array basta usar <b>colchetes [ ]</b> para colocar os elementos, exemplo: <br>
+        <div class="code">
+            const arrayUsuarios = [ <br>                
+                { nome: "Cesar", idade: 28 }, <br>
+                { nome: "Lucas", idade: 30 }, <br>
+                { nome: "Pedro", idade: 29 } <br>
+            ]<br>
+        </div>
+        <b>Obs:</b> Você consegue <b>editar as informações</b> dentro da array seguindo a mesma lógica que vimos anteriormente,exemplo: <b>arrayUsuarios[0].nome = "Cesar Rocha"</b> </b> ( Nesse caso a ordem
+        das informaações vai dentro do array ); <br>
+        No array a ordem dos elementos se inicia do 0, ou seja, o primeiro elemento da array é o 0, o segundo é o 1 e assim por diante.
+    </p>
+
+</div>
+
+<div class="div5">
+
+    <h3> If e Else </h3>
+
+    <p>
+        O <b>if</b> e o <b>else</b> são estruturas de controle de fluxo que permitem executar diferentes blocos de código com base em uma condição. <b>( Maior > Menor < ou Igual== )</b>   <br>
+        O <b>if</b> é usado para verificar se uma condição é verdadeira, você pode usar o if diversas vezes en un cógigo;  <br>
+        Já o <b>else</b> é usado para executar um bloco de código caso a condição do if seja falsa, ou seja, é usado logo após um if, exemplo: <br>
+        <div class="code">
+            const notaAluno1 = 8  <br>
+            const notaDeCorte = 5 <br>
+            if (notaAluno1 >= notaDeCorte) {  
+                console.log("Aluno aprovado!");  } <br>
+            else { console.log("Aluno reprovado!"); } <br>
+        </div>
+        <b>Obs:</b> Quando for usar a circunstância igual é necessário usar dois sinais de <b>igual (==)</b> para o JS entender que vc quer comparar os valores, e não atribuir um valor a variável.
+    </p>
+</div>
+
+<div class="div6">
+
+    <h3>  🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 getElement 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄  </h3>
+
+    <p>
+        O <b>getElement</b> é uma função do JavaScript que permite acessar elementos do HTML para poder manipula-los, ou seja, para pegar um elemento do HTML e fazer algo com ele usando o JS, 
+        como por exemplo, mudar o texto, a cor, a posição, etc. Para referenciar o documento do HTML para o JS é utilizado o <b>document.</b> para usar o getElement basta usar 
+        <b>document.getElementById("id do elemento")</b>, exemplo: <br> 
+        <div class="code">
+            const titulo = document.getElementById("titulo") <br>
+        </div>
+    </p>
+
+    <h4> getElementById </h4>
+
+        <p>
+            O getElementById é uma função que permite pegar um elemento do HTML pelo id (id é único),exemplo: <br>
+            <b> document.getElementById("id-selecionado") </b> <br>
+        </p>
     
-</body>
+    <h4> getElementByClassName </h4>
 
+        <p>
+            O getElementByClassName é uma função que permite pegar um elemento do HTML pelo class (class é múltiplo),exemplo: <br>
+            <b> document.getElementsByClassName("class-selecionada") </b> <br>
+        </p>
+
+    <h4> getElementByTagName </h4>
+
+        <p>
+            O getElementByTagName é uma função que permite pegar um elemento do HTML pelo tag (tag é múltiplo),  nesse caso o getElementByTagName vai pegar todos os elementos da TAG selecionada 
+            como p, h1, input, etc.exemplo: <br>
+            <b> document.getElementsByTagName("tag-selecionada") </b> <br>
+        </p>
+
+    <h4> getElementByName </h4>
+
+        <p>
+            O getElementByName é uma função que permite pegar um elemento do HTML pelo name (name é múltiplo), é igual o class mas usando a TAG <b>name</b> exemplo: <br>
+            <b> document.getElementsByName("nome-selecionado-do-name") </b> <br>
+        </p>
+
+</div>
+
+<div class="div7">
+
+    <h3> querySelector </h3>
+
+    <p>
+        O <b>querySelector</b> é uma função que permite pegar o primeiro elemento do HTML que corresponda ao selecionado, ele usa o mesmo conseito do CSS para essa seleção, exemplo: <br>
+        <b>document.querySelector("seleção desejada")</b> a seteção pode ser uma TAG (p, h1, input, etc) ou um ID (<b>#</b>id-selecionado) ou uma CLASS (<b>.</b>class-selecionada) e já que ele pega APENAS 
+        o primeiro elemento que corresponde a seleção, também é possível por exemplo filtrar pela TAG e CLASS ou ID, exemplo: <br>
+        <b>document.querySelector("p.class-selecionada")</b> ou <b>document.querySelector("button.#id-selecionado")</b> <br>
+        <b>Obs:</b> Eu só consegui usar quando coloquei o código do Java Script depois do body, e abri no navegador.
+    </p>
+
+    <h4> querySelectorAll </h4>
+
+    <p>
+        O <b>querySelectorAll</b> é uma função que permite pegar todos os elementos do HTML que correspondam ao selecionado, usando o mesmo princípio do querySelector.
+    </p>
+
+</div>   
+
+
+
+</body>
 </html>
