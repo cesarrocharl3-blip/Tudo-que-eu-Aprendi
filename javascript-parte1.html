@@ -364,8 +364,32 @@
         Para aplicar esse atributo basta usar as funções começadas com "on" + nome do evento, exemplo: <b>onclick</b>, <b>onmouseover</b>, <b>onmouseout</b>, etc. Eessa função pode ser aplicada em qualquer
         elemento no HTML como em um botão , link, inputs, etc. <br>
     </p>
+<br>
+    <p>
+        Exemplo: No <b>botão 1</b> foi feito uma <b>função (function)</b> usando o <b> onclick </b> para quando o botão for clicado ele executar um alert na página; <br>
 
-    <button> <a href="lista-de-eventos.html" target="_blank"> Veja a lista de eventos </a> </button>
+        <div>
+            <h3> Exemplo de Eventos em FORMS <h3>
+
+            <input class="input-eventos" type="text" placeholder="Digite seu nome" onkeypress="digiteiNoInput()">
+            <span id="contador">0 teclas</span>
+            <br>
+            <button class="b1-eventos" onclick="EventoClickB1()"> BOTÃO1 </button>
+
+            <button class="b2-eventos"> BOTÃO2 </button>
+
+            <button class="b3-eventos"> BOTÃO3 </button>
+        </div>
+
+        Ainda no exemplo acima eu usei o evento <b>onkeypress</b> para contar quantas teclas foram digitadas no input.
+        <img src="" alt="Exemplo de eventos">
+    </p>
+
+    <p>
+        Veja as possibilidades na lista de eventos: <button> <a href="Outros/lista-de-eventos.html" target="_blank"> Lista de Eventos </a> </button> 
+    </p>
+
+
 
 </div>
 

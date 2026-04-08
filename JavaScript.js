@@ -114,3 +114,21 @@ if (notaAluno1 == notaDeCorte) {
     console.log("Aluno aprovado por pouco!");
 }
 
+// Eventos //
+
+function EventoClickB1() {
+
+    alert("Você clicou no botão 1!");
+}   
+
+// onkeypress - Pedi para a IA me ajudar a colocar um contador //
+
+const input = document.querySelector(".input-eventos")  //Está pegando o elemento HTML que tem a class input-eventos e guardando ele na variável input para poder usar depois.//
+const contador = document.getElementById("contador")    //Está pegando o elemento HTML que tem o id contador (o <span> abaixo do button do HTML) e guardando na variável contador.//
+let teclas = 0                                          //Está criando uma variável chamada "teclas" começando com o valor zero, ela vai ser usada para contar as teclas.//
+
+input.onkeypress = function() {                         //Está dizendo: "quando uma tecla for pressionada dentro do input, execute essa função".//
+    teclas++                                            //O ++ significa somar 1 na variável "teclas". Então cada vez que apertar uma tecla, o valor aumenta em 1.//
+    contador.textContent = teclas + " teclas"           //Está atualizando o texto do <span> com o valor atual de teclas. Por exemplo, se pressionou 3 teclas, vai mostrar "3 teclas" na tela.//
+    console.log("Você digitou algo no input!");         //Mostra a mensagem no console do navegador toda vez que uma tecla for pressionada.//
+}
