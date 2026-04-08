@@ -165,6 +165,40 @@
         </div>
     </p>
 
+    <h4> Alteradores de Texto </h4>
+
+    <p>
+        Essas são funções que permitem alterar o texto de um elemento do HTML. <br>
+        Text Content - (<b>constante que ta o texto</b>.textContent) // SÓ HTML <br>
+        Inner Text - (<b>constante que ta o texto</b>.innerText) // LEVA EM CONTA O CSS <br>
+        Inner HTML - (<b>constante que ta o texto</b>.innerHTML) // TRÁS TUDO (permite usar tags HTML dentro do texto). <br>
+        Exemplo: <br>
+
+        <div class="code">
+            constante que ta o texto.textContent = "Novo texto" <br>
+        </div>
+
+    </p>
+
+    <h4> Alteradores de style  </h4>
+
+    <p>
+        Essas são funções que permitem alterar os elementos como se fosse no CSS. <br>
+        Exemplo: A constante do elemento.style.propriedade CSS (color, fontSize, backgroundColor) = "novo valor" <br>
+        Por exemplo se eu quiser mudar a cor de um botão que esta em uma <b>constante button</b> basta usar:<br>
+       
+        <div class="code">
+            button.style.color = "red" <br>
+        </div>
+        
+        Ou mudar o tamanho da fonte :
+        <div class="code">
+            button.style.fontSize = "50px" <br>
+        </div>
+
+        <b>Obs:</b> Quando se coloca uma propriedade que no CSS se usa o<b> hífen (-) </b>para separar as palavras, no JS se usa a <b>letra maiúscula para separar as palavras</b>, exemplo: background-color (CSS) = backgroundColor (JS).
+    </p>
+
 </div>
 
 <div class="div3">
@@ -208,7 +242,7 @@
         cidade: "Guarulhos", <br>
         estado: "SP", } <br>
         <b>}</b> <br>
-        
+
         </div>
     <p>
         <b>Obs:</b> Você pode <b>alterar as informaçõe do objeto</b>, mesmo que ele seja uma variável <b>const</b> basta colocar o nome da variável const + ponto + variável que deseja alterar = "novo valor", 
@@ -321,7 +355,19 @@
 
 </div>   
 
+<div class="div8">
 
+    <h3>Eventos</h3>
+
+    <p>
+        Os <b>Eventos</b> nada mais é que uma ação que o usuário faz na sua página, pode ser a abertura de uma nova aba, o clique em um botão, o clique em um link, etc. <br>
+        Para aplicar esse atributo basta usar as funções começadas com "on" + nome do evento, exemplo: <b>onclick</b>, <b>onmouseover</b>, <b>onmouseout</b>, etc. Eessa função pode ser aplicada em qualquer
+        elemento no HTML como em um botão , link, inputs, etc. <br>
+    </p>
+
+    <button> <a href="lista-de-eventos.html" target="_blank"> Veja a lista de eventos </a> </button>
+
+</div>
 
 </body>
 </html>
