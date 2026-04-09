@@ -368,30 +368,95 @@
     <p>
         Exemplo: No <b>botão 1</b> foi feito uma <b>função (function)</b> usando o <b> onclick </b> para quando o botão for clicado ele executar um alert na página; <br>
 
-        <div>
+        Ainda no exemplo acima eu usei o evento <b>onkeypress</b> para contar quantas teclas foram digitadas no <b> input 1</b>; <br>
+        <img src="imagens/eventos-onkeypress.png" alt="Exemplo de eventos">
+        <br>
+
+        Já no <b> input 2 </b> eu coloquei uma função <b> onkeypress </b> para pegar tudo o que foi digitado, ou seja, a cada tecla pressionada ele mostra o valor do input no console usando o 
+        <b>console.log</b>, veja indo na opção de inspecionar no navegador e depois indo na aba console, ou usando o atalho <b>Ctrl + Shift + J</b> para abrir o console direto; <br>
+
+        No <b> input 3 </b> ao digitar alguma coisa e apertar o botão 2 ele mostra um <b> alert</b> na tela como o que tava no input; <br>
+
+        E no <b> botão 3 </b> ao clicar nele ele pega tudo que está no <b>input 1 </b> e com a função <b>textContent</b>  é passado para um parágrafo abaixo que está identificado com um id e 
+        virou uma const no JavaScript.
+
+    </p>
+
+      <div class="eventos">
             <h3> Exemplo de Eventos em FORMS <h3>
 
-            <input class="input-eventos" type="text" placeholder="Digite seu nome" onkeypress="digiteiNoInput()">
+            <label> Input 1 <input class="inputEventos" type="text" placeholder="Digite seu nome" onkeypress="digiteiNoInput()"> </label>
             <span id="contador">0 teclas</span>
             <br>
-            <button class="b1-eventos" onclick="EventoClickB1()"> BOTÃO1 </button>
+            <label> Input 2 <input class="inputEventos2" type="text" placeholder="Comida favorita" onkeypress="digiteiNoInput2()"> </label>
+            <br>
+            <label> Input 3 <input class="inputEventos3" type="text" placeholder="Alerta na tela > Botão2" > </label>
+            <br>
+            <button class="b1-eventos" onclick="eventoClickB1()"> BOTÃO1 </button>
 
-            <button class="b2-eventos"> BOTÃO2 </button>
+            <button class="b2-eventos" onclick="eventoClickB2()"> BOTÃO2 </button>
 
-            <button class="b3-eventos"> BOTÃO3 </button>
+            <button class="b3-eventos" onclick="eventoClickB3()"> BOTÃO3 </button>
+            <br>
+            <p id="p-eventos"> </p>
         </div>
 
-        Ainda no exemplo acima eu usei o evento <b>onkeypress</b> para contar quantas teclas foram digitadas no input.
-        <img src="" alt="Exemplo de eventos">
-    </p>
-
     <p>
-        Veja as possibilidades na lista de eventos: <button> <a href="Outros/lista-de-eventos.html" target="_blank"> Lista de Eventos </a> </button> 
+        Veja algumas outras possibilidades na lista >> <button> <a href="Outros/lista-de-eventos.html" target="_blank"> Lista de Eventos </a> </button> 
     </p>
-
-
 
 </div>
+
+<div class="div9">
+
+    <h3> Add Event Listener </h3>
+
+    <p>
+        O <b>addEventListener</b> permite adicionar um evento a partir de uma ação específica pré selecionada, como um click ou um change por exemplo. <br>
+
+        <div>
+            <h4> Exemplo </h4>
+            <br>
+            <input class= "inputAel" type="text" placeholder="Digite seu nome" >
+
+            <select class="selectAel">
+                <option> 1 </option>
+                <option> 2 </option>
+                <option> 3 </option>
+            </select>
+
+            <button class="buttonAel"> Clique aqui </button>
+        </div> <br>
+
+        No exemplo acima foi usado um <b>addEventListener</b> para quando o <b>select</b> for alterado (evento "change") ele executar uma função que mostra uma mensagem no console:
+
+        <div class="code">
+            select. <b>addEventListener</b>("<b>change</b>", function() {  <br>
+            console.log("O select foi alterado!") <br>
+            })<br>
+        </div>
+        ou 
+        <div class="code">
+            function valorAlterado() { <br>
+            console.log("O select foi alterado! 2ª forma")  } <br>
+            <br>                                                
+            select. addEventListener("change", valorAlterado)
+        </div>
+
+        Também há uma outra forma de fazer esse código para capturar algumas informações do evento.<br>
+        Para pegar informações do evento coloca qualquer palavra no parentêses do "function" e console.log (event):
+
+        <div class="code">
+            function valorAlterado(event) {<br>
+            console.log(event)  } <br>
+            select. addEventListener("change", valorAlterado) <br>
+        </div>
+
+        <b>Obs:</b> A lista de eventos é a mesma que vimos anteriormente, a diferença é que eles vem com a palavra "on" no inicio, e no addEventListener eles vem sem a palavra "on".
+    </p>
+
+
+
 
 </body>
 </html>

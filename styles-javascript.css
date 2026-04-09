@@ -22,3 +22,33 @@ font-family: "Datatype", monospace;
 font-size: 85px;
 text-align: center;
 } 
+
+.eventos{
+    background-color: rgb(192, 192, 192);
+    border: solid 2px black;
+    padding: 40px;
+    width: fit-content;
+    margin: 10px;
+    
+}
+.eventos h3{
+    font-size: 30px;
+
+}
+.eventos span{
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+.eventos label {
+    font-size:18px ;
+}
+
+.eventos button{
+    font-weight: bolder;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 15px;
+    width: 100px;
+    background-color: aquamarine;
+}
