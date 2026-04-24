@@ -5,6 +5,7 @@
 console.log("Olá, mundo!"); //Código para escrever algo no console//
 
 //Variáveis//
+console.log('---------- Variáveis ----------')
 
 let variavel1 = 'Pode alterar'
 const variavel2 = 'Não pode alterar (MAIS RECOMENDADA A SE USAR)'
@@ -15,6 +16,7 @@ console.log(variavel2);
 console.log(variavel3);
 
 //Strings//
+console.log('---------- Strings ----------')
 
 const tx1 = "Texto com aspas duplas"
 const tx2 = 'Texto com aspas simples'
@@ -25,6 +27,7 @@ console.log(tx2);
 console.log(tx3);
 
 //Template Strings//
+console.log('---------- Template Strings ----------')
 
 const idade = 28
 const carro = "Fusca"
@@ -32,6 +35,7 @@ const carro = "Fusca"
 console.log(`Eu tenho ${idade} anos e meu carro é um ${carro}, estamos no ano de ${2000 + 26}.`);  //Com as template strings, é possível fazer contas dentro do ${}//
 
 // Numbers //
+console.log('---------- Numbers ----------')
 
 const idade2 = "28"
 const conta = 30 + 20
@@ -39,6 +43,7 @@ const conta = 30 + 20
 console.log(`Minha idade ${idade2} e ${conta} reais na conta`)
 
 // Functions //
+console.log('---------- Functions ----------')
 
 function Cheguei() {
     console.log("Olá, seja bem-vindo!");
@@ -57,6 +62,7 @@ console.log(Math.ceil(4.1));
 console.log(Math.round(4.5));
 
 //Objetos//
+console.log('---------- Objetos ----------')
 
 const usuario1 = {
     nome: "Cesar",
@@ -85,6 +91,7 @@ const usuario2 = {
 console.log(usuario2);
 
 //Arrays//
+console.log('---------- Arrays ----------')
 
 const arrayUsuarios = [
     {
@@ -107,6 +114,7 @@ arrayUsuarios[0].nome = "Cesar Rocha"
 console.log(arrayUsuarios);
 
 //If e Else//
+console.log('---------- If e Else ----------')
 
 const notaAluno1 = 7
 const notaDeCorte = 5
@@ -159,6 +167,7 @@ salary < 3000 ? console.log("Júnior") : console.log("Pleno")
 salary < 3000 ? console.log("Júnior") : salary > 3000 && salary < 10000 ? console.log("Pleno") : console.log("Sênior")
 
 // Eventos //
+console.log('---------- Eventos ----------')
 
 function eventoClickB1() {
 
@@ -203,6 +212,7 @@ function eventoClickB3() {
 }
 
 // Add Event Listener //
+console.log('---------- Add Event Listener ----------')
 
 const inputAel = document.querySelector(".inputAel")
 const select = document.querySelector(".selectAel")
@@ -229,6 +239,7 @@ function valorAlterado(event) {
 select.addEventListener("change", valorAlterado)
 
 // Operadores Lógicos//
+console.log('---------- Operadores Lógicos ----------')
 
 const digitarASenha = false
 const digitarOToken = true
@@ -241,6 +252,7 @@ if (digitarASenha || digitarOToken || numeroDaConta) {
 }
 
 // Switch Case //
+
 
 const diaDaSemana = document.querySelector("#diaDaSemana")
 const respostaSwitch = document.querySelector("#s-case")
@@ -275,3 +287,207 @@ function verificarDia() {
 }
 
 diaDaSemana.addEventListener("input", verificarDia);
+
+// Set Time Out e Set Interval //
+
+
+setTimeout(function () {                     // Coloca o que vai ser executado
+    console.log("Olá, seja bem-vindo!")
+}, 10000)                                    // 10000 milissegundos = 10 segundos
+
+
+
+setInterval(function () {                // Coloca o que vai ser executado
+    console.log("Olá, seja bem-vindo!")
+}, 10000)                                // 10000 milissegundos = 10 segundos   
+
+//Exemplo pártico - Cronometro
+
+const timeNumber = document.querySelector("#timeNumber")      // Criei todas as variáveis 
+const start = document.querySelector("#start")
+const pause = document.querySelector("#pause")
+
+let tempo = 0
+let set                                                       // Criei a variável que vai guardar o setInterval
+
+
+function start1() {
+
+    set = setInterval(function () {                          //Ja coloquei o setInterval com o nome da váriavel que criei para ele (set)
+        tempo++
+        timeNumber.innerHTML = tempo
+    }, 1000)                                                //Coloquei o tempo para adicionar de 1 em 1 segundo
+
+}
+
+function stop() {
+
+    clearInterval(set)
+
+}
+
+start.addEventListener("click", start1)                     //Cria os eventos de click nos botões
+pause.addEventListener("click", stop)
+
+// For
+console.log('---------- For ----------')
+
+
+for (let i = 0; i < 11; i++) {
+    console.log(i)
+}
+
+//Exemplo prático:
+
+const user = ['Cesar', 'Lucas', 'Gabriel', 'Marcela']
+
+
+for (let i = 0; i < user.length; i++) {         // O atributo .length é para pegar o tamanho do array, ou seja, quantas pessoas tem na lista.
+    console.log(user[i])
+}
+
+// Buscador de Contatos 
+
+const buscar = document.getElementById('buttonfor')
+const nomeContato = document.getElementById('inputfor')
+const contatoResult = document.getElementById('pfor')
+
+const contacts = [
+    { name: 'Rodolfo', number: '(19) 94343-3434' },
+    { name: 'Paulo', number: '(12) 93443-3434' },
+    { name: 'Aline', number: '(13) 94566-3434' },
+    { name: 'Maria', number: '(14) 94343-3476' }
+];
+
+
+function buscarContato() {
+
+    // Eu fiz dessa forma abaixo, mas a forma mais simples de fazer isso é usando o break
+
+    // let encontrou = false
+
+    // for (let i = 0; i < contacts.length; i++) {
+
+    //   if (nomeContato.value === contacts[i].name) {
+    //     encontrou = true
+    //   contatoResult.innerHTML = "Nome: " + contacts[i].name + " - Telefone: " + contacts[i].number
+    // }
+    //}
+
+    //  if (encontrou === false) {
+    //    contatoResult.innerHTML = 'Contato não encontrado'
+    //}
+
+    for (let i = 0; i < contacts.length; i++) {
+
+        if (nomeContato.value.toLowerCase() === contacts[i].name.toLowerCase()) {                  // .toLowerCase() - não importa se o usuário digitar em maiúsculo ou minúsculo, o código vai encontrar o contato.
+            contatoResult.innerHTML = `Nome: ${contacts[i].name} - Telefone: ${contacts[i].number}`
+
+            break
+        }
+
+        else {
+            contatoResult.innerHTML = 'Contato não encontrado'
+        }
+    }
+}
+
+buscar.addEventListener("click", buscarContato)
+
+// For of 
+console.log('---------- For of ----------')
+
+const contactsForof = ['Rodolfo', 'Maria', 'Paulo', 'Aline']
+
+for (const name of contactsForof) {
+
+    console.log(name)
+
+}
+
+// For in 
+console.log('---------- For in ----------')
+
+
+// O name, age e city são as chaves (key) do objeto
+const userForin = {
+    name: 'Cesar',
+    age: 28,
+    city: 'São Paulo'
+}
+
+// Construção do For in
+for (const key in userForin) {
+
+    console.log(key) // Mostra as chaves do objeto (name, age, city)
+
+    console.log(userForin[key]) // Mostra os valores do objeto (Cesar, 28, São Paulo)
+}
+
+// Formas de acessar os valores do objeto
+console.log(userForin.name) // Forma mais comum
+console.log(userForin['name']) // Forma menos comum
+
+//Para resposta completa 
+
+for (const key in userForin) {
+
+    console.log(key + " : " + userForin[key])  // Forma mais simples
+
+    console.log(`${key} : ${userForin[key]}`) // Mais profissional
+
+}
+
+// While e Do While
+console.log('---------- While e Do While ----------')
+
+
+let i = 0
+
+while (i <= 10) {  // condição 
+    console.log(i) // código que vai rodar
+    i++            // incremento
+}
+
+// Do While
+
+let j = 0
+
+do {
+    console.log(j)      // código que vai rodar
+    j++                 // incremento
+} while (j <= 10);      // condição
+
+//Desafio - While
+
+const buscarw = document.getElementById('buttonw')
+const nomeContatow = document.getElementById('inputw')
+const contatoResultw = document.getElementById('pw')
+
+const contactsw = [
+    { name: 'Rodolfo', number: '(19) 94343-3434' },
+    { name: 'Paulo', number: '(12) 93443-3434' },
+    { name: 'Aline', number: '(13) 94566-3434' },
+    { name: 'Maria', number: '(14) 94343-3476' }
+];
+
+function buscarContatow() {
+
+    let w = 0
+
+    while (w < contactsw.length) {
+
+        if (nomeContatow.value.toLowerCase() === contacts[w].name.toLowerCase()) {
+            contatoResultw.innerHTML = `Nome: ${contacts[w].name} - Telefone: ${contacts[w].number}`
+
+            break
+        }
+
+        else {
+            contatoResult.innerHTML = 'Contato não encontrado'
+        }
+    }
+
+}
+
+buscarw.addEventListener("click", buscarContatow)

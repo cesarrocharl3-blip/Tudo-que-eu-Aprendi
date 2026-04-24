@@ -552,7 +552,7 @@
         Para aplicar esse atributo basta usar as funções começadas com "on" + nome do evento, exemplo: <b>onclick</b>, <b>onmouseover</b>, <b>onmouseout</b>, etc. Eessa função pode ser aplicada em qualquer
         elemento no HTML como em um botão , link, inputs, etc. <br>
     </p>
-<br>
+    <br>
     <p>
         Exemplo: No <b>botão 1</b> foi feito uma <b>função (function)</b> usando o <b> onclick </b> para quando o botão for clicado ele executar um alert na página; <br>
 
@@ -686,6 +686,191 @@
     </p>
 
 </div>
+
+<div class="div11">
+
+    <h3> Set Time Out e Set Interval </h3>
+
+    <p>
+        O <b>setTimeout</b> é uma função que permite executar um bloco de código após um determinado tempo, exemplo: depois de 10 segundos no site executar um alert dando bom dia (uma vez só). <br>
+       
+        o <b>setInterval</b> é uma função que permite executar um bloco de código a cada determinado tempo, exemplo: a cada 10 segundos no site executar um alert dando bom dia (várias vezes). <br>
+
+        Construção: <br>
+
+        <div class="code">
+            <b>setTimeout</b>(function () {  ---------------> Coloca o que vai ser executado <br>
+            console.log("Olá, seja bem-vindo!")                 <br>
+            }, 10000)  ------------------------------> 10000 milissegundos = 10 segundos<br>
+    <br>
+    <br>
+
+            <b>setInterval</b>(function () {  --------------> Coloca o que vai ser executado<br>
+            console.log("Olá, seja bem-vindo!")<br>
+            }, 10000)  -----------------------------> 10000 milissegundos = 10 segundos  <br> 
+        </div>
+
+        <b>Obs:</b> Você pode nomear essas funções set com se fosse uma variável, para depois por exemplo usar o <b>clearTimeout</b> ou <b>clearInterval</b> para cancelar a execução da função. <br>
+        exemplo: <br>
+
+        <div class="code">
+            let tempo = setInterval(function () {  ---------------> Coloca o que vai ser executado <br>
+            console.log("Olá, eu sou Tom!")                 <br>
+            }, 1000)  ------------------------------> 1000 milissegundos = 1 segundos<br>
+    <br>
+            clearInterval(tempo) --------------------------> Cancela (pausa) a execução da função
+        </div>
+
+        Exemplo na prática:
+    </p>
+
+        <h3 id="timeNumber"> 00 </h3>
+        <button id = "start"> Iniciar </button>
+        <button id = "pause"> Pausar </button>
+
+</div>
+
+<div class="div12">
+
+    <h3> For </h3>
+
+    <p>
+        A estrutura de repetição <b>for</b> é usada para repetir um bloco de código um determinado número de vezes. <br>
+        <b>Obs:</b> É usado uma váriavel para dizer a quantidade de vez que o bloco de código vai ser repetido, normalmente se usa a letra "i" para representar essa variável. <br>
+        Construção: <br>
+
+        <div class="code">
+            for ( let i = 0; i < 11; i++ ) {  <br>  
+            console.log (i)  <br>
+            }  <br>
+            <br>
+            Então o i = 0 até chegar em i < 11 vai se repetir (1++ = soma mais 1) até atingir essa regra. <br>
+        </div>
+
+        Exemplo prático: Escrever no Console os nomes da lista abaixo: <br>
+
+        <div class="code">
+            for (let i = 0; i < user.length; i++) {   <br>
+                console.log(user[i]) <br>
+            } <br>
+        </div> 
+        
+        <b>Obs:</b> O atributo .length é para pegar o tamanho do array, ou seja, quantas pessoas tem na lista. <br>
+        <br>
+        <b> Break </b> é usado para parar o loop (interromper o código). <br>
+        <b> Continue </b> é usado para pular uma interação do loop (interromper a interação atual e ir para a próxima). <br>
+    </p>
+
+    <p>
+       
+
+        Buscador de Contatos <br>
+        <br>
+
+        Contatos: Rodolfo Paulo Aline e Maria <br><br>
+
+        <label> 
+            Buscar contatos > <input placeholder = "Digite o nome do contato" id=inputfor>
+        </label>
+      
+        <button id="buttonfor"> Buscar </button>  
+
+        <p id="pfor"></p>
+
+    </p>
+
+    <h4> For of </h4>
+    <p>
+        O <b>for of</b> é usado para iterar (mostrar) os itens de um array, como por exemplo essa lista de nomes que fizemos acima, exemplo: <br>
+        <br>
+        Construção: <br>
+
+        <div class = "code">
+            const contactsForof = ['Rodolfo', 'Maria', 'Paulo', 'Aline'] <br>
+            <br>
+            for (const name of contactsForof) { <br>
+            <br>
+            console.log(name) } <br>
+            <br>
+        </div> 
+
+        <h4> For in </h4>
+    <p>
+        O <b>for in</b> diferente dos anteriores é usado para mostrar os itens de um objeto. <br>
+        <br>
+        Construção: <br>
+
+        <div class = "code">
+            for (const key in userForin) { <br>
+
+            console.log(key) ----------------> // Mostra as chaves do objeto (name, age, city) <br>
+
+            console.log(userForin[key]) ------> // Mostra os valores do objeto (Cesar, 28, São Paulo) <br>
+            } <br>               
+        </div> 
+
+        Se quisermos pegar a <b>resposta completa</b> do objeto (valores e chaves) fazemos assim: <br>
+        <br>
+        <div class = "code">
+            for (const key in userForin) { <br>
+
+            console.log ( key + " : " + userForin[key] )  --------------> // Forma mais simples <br>
+
+            console.log (`${key} : ${userForin[key]}`) ----------------> // Mais profissional <br>
+            }              
+        </div> 
+    </p>
+        
+</div>
+
+<div class="div13">
+
+    <h3> While e Do While </h3>
+
+    <p>
+        o <b>while</b> é usado para repetir um bloco de código com uma <b>condição</b>, enquanto a condição for verdadeira ele vai repetir a ação, exemplo: <br>
+        <br>
+        <div class="code">
+            while (condição) {  <br>
+                código que vai rodar <br>   
+            } <br>
+        </div> 
+
+        Já o <b>do while</b> primeiro executa o código e depois verifica a condição, exemplo: <br>
+        <br>
+        <div class="code">
+            do {  <br>
+                código que vai rodar <br>   
+            } while (condição); <br>
+        </div>  
+
+        <b>Obs:</b> Assim como visto anteriormente o <b>break</b> e o <b>continue</b> também podem ser usados aqui. <br>
+    </p>
+    <p>
+        
+
+            Buscador de Contatos <br>
+            <br>
+
+            Contatos: Rodolfo Paulo Aline e Maria <br><br>
+
+            <label> 
+                Buscar contatos > <input placeholder = "Digite o nome do contato" id=inputw>
+            </label>
+        
+            <button id="buttonw"> Buscar </button>  
+
+            <p id="pw"></p>
+
+        </p>
+
+
+</div>
+
+
+
+
+
 
 
 
