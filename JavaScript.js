@@ -474,20 +474,55 @@ const contactsw = [
 function buscarContatow() {
 
     let w = 0
+    let encontrouw = false
 
     while (w < contactsw.length) {
 
-        if (nomeContatow.value.toLowerCase() === contacts[w].name.toLowerCase()) {
-            contatoResultw.innerHTML = `Nome: ${contacts[w].name} - Telefone: ${contacts[w].number}`
+        if (nomeContatow.value.toLowerCase() === contactsw[w].name.toLowerCase()) {
+            contatoResultw.innerHTML = `Nome: ${contactsw[w].name} - Telefone: ${contactsw[w].number}`
 
+            encontrouw = true
             break
         }
-
-        else {
-            contatoResult.innerHTML = 'Contato não encontrado'
-        }
+        w++
     }
 
+    if (encontrouw === false) {
+        contatoResultw.innerHTML = 'Contato não encontrado'
+    }
 }
 
 buscarw.addEventListener("click", buscarContatow)
+
+// For Each
+console.log('---------- For Each ----------')
+
+const arrayUsers = [
+    { name: 'Rodolfo', age: 33, contact: '(19) 94343-3434' },
+    { name: 'Paulo', age: 21, contact: '(12) 93443-3434' },
+    { name: 'Aline', age: 40, contact: '(13) 94566-3434' },
+    { name: 'Maria', age: 12, contact: '(14) 94343-3476' },
+]
+
+console.log('-- Exemplo For Each mostrando item, index e array--')
+
+arrayUsers.forEach((item, index, array) => {
+    console.log(item)
+    console.log(index)
+    console.log(array)
+});
+
+console.log('-- Exemplo prático For Each  --')
+
+const arrayFEach = [
+    { name: 'Rodolfo', age: 33, contact: '(19) 94343-3434' },
+    { name: 'Paulo', age: 21, contact: '(12) 93443-3434' },
+    { name: 'Aline', age: 40, contact: '(13) 94566-3434' },
+    { name: 'Maria', age: 12, contact: '(14) 94343-3476' },
+]
+
+
+arrayFEach.forEach((item, index) => {
+
+    console.log(`${index + 1} - Nome: ${item.name} - Idade: ${item.age} - Telefone: ${item.contact}`)
+});

@@ -867,6 +867,54 @@
 
 </div>
 
+<div class="div14">
+
+    <h3> For Each </h3>
+
+    <p>
+        O <b>forEach</b> utiliza um array interligado a ele para mostrar mais algumas informações que os anteriores que vimos até agora não mostram, como por exemplo o <b>index</b> (posição do item 0, 1, 2, 3, no array), 
+        <b> item</b> (são as linhas de informações dentro do array) e <b>array</b> (o array em si), exemplo: <br>
+        <br>
+        
+        Array e item:<br>
+        <div class = "code">
+          const <b>array</b>Users = [ <br>
+           <b> { name: 'Rodolfo', age: 33, contact: '(19) 94343-3434' }, ----------> Item </b> <br>
+            { name: 'Paulo', age: 21, contact: '(12) 93443-3434' }, <br>
+            { name: 'Aline', age: 40, contact: '(13) 94566-3434' }, <br>
+            { name: 'Maria', age: 12, contact: '(14) 94343-3476' }, <br>
+          ]
+        </div> 
+       <br>
+       Construção:
+        <div class = "code">
+           <b>array.forEach(element => {  </b>    -----------------> (=>) Arrow function, a mesma coisa que uma function normal <br>
+                (código a ser executado) <br>
+            <b>});</b> <br>
+        </div>
+        <br>
+        <b>Obs:</b> Se na hora de usar o index para mostrar as posições do array, você não quiser começar com o 0, basta usar (index + 1) no lugar do index.
+        <br>
+        Exemplo prático: <br>
+        <div class="code">
+            arrayUsers.forEach((item, index) => {  <br>
+                console.log(`${index + 1} - Nome: ${item.name} - Idade: ${item.age} - Telefone: ${item.contact}`) <br>
+            }); <br>
+        </div>
+        <br>
+       Resultado: no console:
+       <br>
+       1 - Nome: Rodolfo - Idade: 33 - Telefone: (19) 94343-3434 <br>
+       2 - Nome: Paulo - Idade: 21 - Telefone: (12) 93443-3434 <br>
+       3 - Nome: Aline - Idade: 40 - Telefone: (13) 94566-3434 <br>
+       4 - Nome: Maria - Idade: 12 - Telefone: (14) 94343-3476 <br>
+    </p>
+
+</div>
+
+
+
+
 
 
 
