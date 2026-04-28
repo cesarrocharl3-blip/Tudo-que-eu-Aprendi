@@ -214,9 +214,9 @@ function eventoClickB3() {
 // Add Event Listener //
 console.log('---------- Add Event Listener ----------')
 
-const inputAel = document.querySelector(".inputAel")
+
 const select = document.querySelector(".selectAel")
-const buttonAel = document.querySelector(".buttonAel")
+
 
 select.addEventListener("change", function () {      // Está dizendo: "quando o select for alterado, execute essa função"( Essa é uma função anônima, sem nome).//
 

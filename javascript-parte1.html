@@ -43,18 +43,27 @@
     <header>
          
         <ul>
-            <li> <a href="#novasfuncoes">Novas Funções</a> </li>
-            <li> <a href="#posicoes">Posições</a></li>
-            <li> <a href="#pseudoe">Pseudo Elementos</a></li>
-            <li> <a href="#pseudoc">Pseudo Classes</a></li>
-            <li> <a href="#responsividade">Responsividade</a></li>
+            <li> <a href="#conceitosbasicos">Conceitos Básicos</a> </li>
+            <li> <a href="#operadores">Operadores</a></li>
+            <li> <a href="#objetos">Objetos</a></li>    
+            <li> <a href="#arrays">Arrays</a></li>
+            <li> <a href="#ifeelse">If e Else</a></li>
+            <li> <a href="#getelement">Get Element</a></li>
+            <li> <a href="#queryselector">Query Selector</a></li>
+            <li> <a href="#eventos">Eventos</a></li>
+            <li> <a href="#addeventlistener">Add Event Listener</a></li>
+            <li> <a href="#switchcase">Switch Case</a></li>
+            <li> <a href="#settimeoutsetinterval">Set Time Out e Set Interval</a></li>
+            <li> <a href="#for">For in/of</a></li>
+            <li> <a href="#whileedowhile">While e Do While</a></li>
+            <li> <a href="#foreach">For Each</a></li>
         </ul>
     </header>
 
 </div>
 
 <div class="div0">
- <h3>  🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 Introdução ao JavaScript 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄  </h3>
+ <h3>   🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 Introdução ao JavaScript 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄   </h3>
 
     <p> 
         Daqui em diante é muito importante saber o conceito de <b>Lógica de Programação</b> e <b>Algoritmos</b>. A lógica de programação nada mais é que a forma de pensar
@@ -72,30 +81,30 @@
     </p>
 </div>    
 
-<div class="div1">
-     <h3>  🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 Variáveis 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄  </h3>
+<div class="div2">
 
-     <p>
+    <h3 id="conceitosbasicos">  🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 Conceitos Básicos 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄  </h3>
+
+    <h4> Variáveis </h4>
+
+    <p>
         As variáveis nada mais são que um espaço na memória do seu computador, onde você pode armazenar qualquer informação. Pode ser um número, uma frase, uma imagem, qualquer coisa.
         E elas são: <br>
         <b>let</b> - São variáveis que PODEM ser ALTERADAS   <br> 
         <b>const</b> - São CONSTANTES que não podem ser alteradas    <br>
         <b>var</b> - São variáveis que NÃO ESTÃO MAIS EM USO, ou seja, NÃO É PARA USAR MAIS <br> 
         Exemplo: <br>
+    </p>
         <div class="code">
             let (nome da variável) = (valor da variável) <br>
             let quantidadeDeAlunosNaTurma = 30 <br>
         </div>
-        <b>Obs:</b> Veja que o nome da variável começa com letra minúscula, e quando tem mais de uma palavra, a primeira letra de cada palavra é maiúscula para diferenciá-la (padrão camelCase). Isso porque
+    <p>
+        <b>Obs:</b> Veja que o nome da variável começa com letra minúscula, e quando tem mais de uma palavra, a primeira letra de cada palavra é maiúscula para diferenciá-la (alunosDaTurma). Isso porque
         não pode haver espaço no nome da variável, nem começar com número ou caracteres especiais. Também não pode haver duas variáveis com o mesmo nome.
-     </p>
-</div>
- 
 
-<div class="div2">
-
-    <h3>  🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 Conceitos Básicos 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄  </h3>
-
+    </p>
+    
     <h4> String - Textos </h4>
 
     <p>
@@ -110,6 +119,7 @@
 
     <p>
         As template strings são uma forma de escrever texto usando a <b>crase</b> onde você pode colocar elementos de código dentro, e para isso se usa <b>${variável}</b>, exemplo: <br>
+    </p>
            <div class="code">
             const idade = 28 <br>
             const carro = "Fusca" <br>
@@ -123,6 +133,7 @@
 
     <p>
         Os numeros no JS podem ser inteiros ou decimais (3.14) e podem ser usados para contas ou apenas textos, exemplo: <br>
+    </p>
            <div class="code">
             const idade2 = "28" <br>
             const conta = 30 + 20 <br>
@@ -147,10 +158,12 @@
 
     <p>
         O <b>boolean</b> é um tipo de dado que só pode ter dois valores: <b>true</b> (verdadeiro) ou <b>false</b> (falso), ele é muito usado para fazer comparações e tomar decisões no código, exemplo: <br>
+    </p>
         <div class="code">
         const maiorDeIdade = true <br>
         const menorDeIdade = false <br>
         </div>
+    <p>
     </p>
 
     <h4> Functions </h4>
@@ -158,11 +171,12 @@
     <p>
         As funções são trechos de código que só são executados quando são chamados. Elas são usadas para organizar o código e evitar repetições, e para criar uma função basta usar a palavra <b>function</b>
         + nome da função + parênteses + chaves, exemplo: <br>
-
+    </p>
         <div class="code"> 
             function Cheguei() { console.log("Olá, seja bem-vindo!"); } <br>
             <b>Para executar esta função basta usar:</b> Cheguei()
         </div>
+    <p>
     </p>
 
     <h4> Alteradores de Texto </h4>
@@ -173,10 +187,12 @@
         Inner Text - (<b>constante que tá o texto</b>.innerText) // LEVA EM CONTA O CSS <br>
         Inner HTML - (<b>constante que tá o texto</b>.innerHTML) // TRAZ TUDO (permite usar tags HTML dentro do texto). <br>
         Exemplo: <br>
-
+    </p>
         <div class="code">
             constante que ta o texto.textContent = "Novo texto" <br>
         </div>
+
+    <p>
 
     </p>
 
@@ -190,16 +206,19 @@
         <div class="code">
             button.style.color = "red" <br>
         </div>
-        
         Ou mudar o tamanho da fonte :
+    </p>
         <div class="code">
             button.style.fontSize = "50px" <br>
         </div>
 
+    <p>
+
         <b>Obs:</b> Quando se coloca uma propriedade que no CSS se usa o<b> hífen (-) </b>para separar as palavras, no JS se usa a <b>letra maiúscula para separar as palavras</b>, exemplo: background-color (CSS) = backgroundColor (JS).
     </p>
 
-    <h4> Math <h4>
+    <h4> Math </h4>
+
         <p>
             São funções que permitem fazer cálculos matemáticos, exemplo: <br>
 
@@ -208,13 +227,13 @@
             <b>Math.sqrt()</b> - Calcula a raiz quadrada de um número (√4) <br>
             <b>Math.PI</b> - Retorna o valor de PI <br>
         
-            Também há essas outras funções que arredondam números:
+            Também há essas outras funções que arredondam números: <br>
 
                 <b>Math.floor()</b> - Arredonda um número para baixo <br>
                 <b>Math.ceil()</b> - Arredonda um número para cima <br>
                 <b>Math.round()</b> - Arredonda um número para o inteiro mais próximo <br>  
                 Exemplo:
-
+    </p>
             <div class="code">
                 const exemplo1 = Math.pow(2, 2); <br>
                 const exemplo2 = Math.sqrt(4); <br>
@@ -223,7 +242,9 @@
             </div>
         </p>
 
-        <h4> Operadores Aritméticos </h4>
+        <h3 id="operadores">  🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 Operadores 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄  </h3>
+
+          <h4>  Operadores Aritméticos  </h4>
 
         <p>
             Também é um método de fazer contas, como o Math, porém, além das operações simples que já sabemos (+, -, /, *) também há: <br>
@@ -233,24 +254,27 @@
             <b>++</b> - Incremento <br>
             <b>--</b> - Decremento <br>
             Exemplo:
-
+    </p>
             <div class="code">
                 const exemplo5 = 11 % 2;  - 11 / 2 = 5, resto 1 <br>
                 const exemplo6 = 2 ** 2; - É o número ao quadrado  <br>
                 const exemplo7 = 2 ++ 2;  - Adiciona +1 <br>
                 const exemplo8 = 2 -- 2; - Subtrai -1<br>
             </div>
+    <p>
         </p>
 
          <h4> Operadores de Atribuição </h4>
 
          <p>
             É como os operadores aritméticos mas de uma maneira mais simplificada para economizar código, exemplo:
+         </p>
             <div class="code">
                 let exemplo = 20 <br>
                 exemplo += 10 <br>
                 O resultado é 30 <br>
             </div>     
+         <p>
             Dá pra usar todas as operações matemáticas que já vimos acima.    
          </p>
 
@@ -268,7 +292,7 @@
             <b>>=</b> - Maior ou igual que <br>
             <b><=</b> - Menor ou igual que <br>
             Exemplo:
-
+         </p>
             <div class="code">
                 const exemplo1 = 20; <br>
                 const exemplo2 = "20";<br>
@@ -281,6 +305,7 @@
                 false <br>
                ( São diferentes! não são do mesmo tipo )<br>
             </div>
+         <p>
          </p>
 
          <h4> Operadores Lógicos </h4>
@@ -307,7 +332,7 @@
             <br>
 
             Exemplo:
-
+         </p>
             <div class="code">
                 const digitarASenha = false<br>
                 const digitarOToken = true<br>
@@ -319,6 +344,7 @@
                     console.log("Autenticação FALHOU")<br>
                 }<br>
             </div>
+         <p>
          </p>
 
          <h4> Operador type of e delete</h4>
@@ -328,18 +354,20 @@
             <b>delete</b> - Deleta uma variável <br>
             Exemplo:
             <br>
+         </p>
             <div class="code">
                 const myNumber = 30<br>
 
                 console.log(typeof myNumber)<br>
             </div>
+         <p>
          </p>
 
 </div>
 
 <div class="div3">
 
-    <h3>  🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 Objetos 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄  </h3>
+    <h3 id="objetos">  🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 Objetos 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄  </h3>
 
     <p>
        São grupos de informações relacionadas a uma variável. Por exemplo, um cadastro de um usuário: onde, ao invés de criar uma variável para cada informação do usuário, como nome, idade, email, etc., podemos
@@ -389,11 +417,12 @@
 
 <div class="div4">
 
-    <h3>  🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 Array 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄  </h3>
+    <h3 id="array">  🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 Array 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄  </h3>
 
     <p>
         Uma <b>array</b> é como se fosse uma box de informações para facilitar a organização de dados relacionados, assim como facilitar posteriormente na busca e edição desses itens dentro da array, e 
         dentro dela é possível colocar qualquer tipo de informação, como números, textos, objetos, outras arrays, etc, e para criar uma array basta usar <b>colchetes [ ]</b> para colocar os elementos, exemplo: <br>
+    </p>
         <div class="code">
             const arrayUsuarios = [ <br>                
                 { nome: "Cesar", idade: 28 }, <br>
@@ -401,6 +430,7 @@
                 { nome: "Pedro", idade: 29 } <br>
             ]<br>
         </div>
+    <p>
         <b>Obs:</b> Você consegue <b>editar as informações</b> dentro da array seguindo a mesma lógica que vimos anteriormente, exemplo: <b>arrayUsuarios[0].nome = "Cesar Rocha"</b> (nesse caso a posição
         do elemento vai dentro dos colchetes [ ] da array); <br>
         No array, a ordem dos elementos se inicia no 0, ou seja, o primeiro elemento da array é o 0, o segundo é o 1 e assim por diante.
@@ -410,12 +440,13 @@
 
 <div class="div5">
 
-    <h3> If e Else </h3>
+    <h3 id="ifeelse">  🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 If e Else 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄  </h3>
 
     <p>
         O <b>if</b> e o <b>else</b> são estruturas de controle de fluxo que permitem executar diferentes blocos de código com base em uma condição. <b>( Maior > Menor < ou Igual == )</b>   <br>
         O <b>if</b> é usado para verificar se uma condição é verdadeira. Você pode usar o if diversas vezes em um código;  <br>
         Já o <b>else</b> é usado para executar um bloco de código caso a condição do if seja falsa, ou seja, é usado logo após um if, exemplo: <br>
+    </p>
         <div class="code">
             const notaAluno1 = 8  <br>
             const notaDeCorte = 5 <br>
@@ -423,6 +454,7 @@
                 console.log("Aluno aprovado!");  } <br>
             else { console.log("Aluno reprovado!"); } <br>
         </div>
+    <p>
         <b>Obs:</b> Quando se usa mais de um <b>If</b> pode ter mais que uma condição verdadeira! <br>
         Quando for usar a circunstância igual é necessário usar dois sinais de <b>igual (==)</b> para o JS entender que vc quer comparar os valores, e não atribuir um valor a variável.
     </p>
@@ -431,7 +463,9 @@
     <h4> Else If  (juntos)</h4>
 
     <p>
-        O <b>else if</b> é usado para verificar se uma condição é verdadeira ou falsa, porém, você pode usar o else if diversas vezes em um cód</p>igo;  <br>
+        O <b>else if</b> é usado para verificar se uma condição é verdadeira ou falsa, porém, você pode usar o else if diversas vezes em um código;
+    </p>
+    <p>
         Exemplo: <br>
     </p>
 
@@ -461,7 +495,7 @@
     ? if (se) <br>
     : else (se não) <br>
     && (if sem else) <br>
-
+   </p>
     <div class="code">
         const salary = 5000<br>
         <br>
@@ -481,15 +515,17 @@
 
 <div class="div6">
 
-    <h3>  🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 getElement 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄  </h3>
+    <h3 id="getelement">  🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 getElement 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄  </h3>
 
     <p>
         O <b>getElement</b> é uma família de funções do JavaScript que permite acessar elementos do HTML para poder manipulá-los, ou seja, pegar um elemento do HTML e fazer algo com ele usando o JS, 
         como por exemplo, mudar o texto, a cor, a posição, etc. Para acessar o documento do HTML no JS, é utilizado o <b>document.</b> e para buscar o elemento, basta usar 
         <b>document.getElementById("id do elemento")</b>, exemplo: <br> 
+    </p>
         <div class="code">
             const titulo = document.getElementById("titulo") <br>
         </div>
+    <p>
     </p>
 
     <h4> getElementById </h4>
@@ -505,7 +541,7 @@
             O getElementByClassName é uma função que permite pegar um elemento do HTML pelo class (class é múltiplo),exemplo: <br>
             <b> document.getElementsByClassName("class-selecionada") </b> <br>
         </p>
-
+    
     <h4> getElementByTagName </h4>
 
         <p>
@@ -525,7 +561,7 @@
 
 <div class="div7">
 
-    <h3> querySelector </h3>
+    <h3 id="queryselector">  🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 querySelector 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄  </h3>
 
     <p>
         O <b>querySelector</b> é uma função que permite pegar o primeiro elemento do HTML que corresponda ao selecionado, ele usa o mesmo conseito do CSS para essa seleção, exemplo: <br>
@@ -545,7 +581,7 @@
 
 <div class="div8">
 
-    <h3>Eventos</h3>
+    <h3 id="eventos"> 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 Eventos 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 </h3>
 
     <p>
         Os <b>Eventos</b> nada mais é que uma ação que o usuário faz na sua página, pode ser a abertura de uma nova aba, o clique em um botão, o clique em um link, etc. <br>
@@ -556,11 +592,11 @@
     <p>
         Exemplo: No <b>botão 1</b> foi feito uma <b>função (function)</b> usando o <b> onclick </b> para quando o botão for clicado ele executar um alert na página; <br>
 
-        Ainda no exemplo acima eu usei o evento <b>onkeypress</b> para contar quantas teclas foram digitadas no <b> input 1</b>; <br>
+        Ainda no exemplo abaixo eu usei o evento <b>onkeypress</b> para contar quantas teclas foram digitadas no <b> input 1</b>; <br>
         <img src="imagens/eventos-onkeypress.png" alt="Exemplo de eventos">
         <br>
 
-        Já no <b> input 2 </b> eu coloquei uma função no <b> onkeypress </b> para pegar tudo o que foi digitado. Ou seja, a cada tecla pressionada ele mostra o valor do input no console usando o 
+        Já no <b> input 2 </b> eu coloquei uma função <b> oninput </b> para pegar tudo o que foi digitado. Ou seja, a cada tecla pressionada ele mostra o valor do input no console usando o 
         <b>console.log</b>. Veja indo na opção de inspecionar no navegador e depois na aba Console, ou usando o atalho <b>Ctrl + Shift + J</b> para abrir o console direto; <br>
 
         No <b> input 3 </b> ao digitar alguma coisa e apertar o botão 2 ele mostra um <b> alert</b> na tela com o que estava no input; <br>
@@ -571,15 +607,25 @@
     </p>
 
       <div class="eventos">
-            <h3> Exemplo de Eventos em FORMS <h3>
+            <h3> Exemplo de Eventos em FORMS </h3>
 
-            <label> Input 1 <input class="inputEventos" type="text" placeholder="Digite seu nome" onkeypress="digiteiNoInput()"> </label>
+            <label> 
+                Input 1 <input class="inputEventos" type="text" placeholder="Digite seu nome" onkeypress="digiteiNoInput()"> 
+            </label>
+
             <span id="contador">0 teclas</span>
             <br>
-            <label> Input 2 <input class="inputEventos2" type="text" placeholder="Comida favorita" onkeypress="digiteiNoInput2()"> </label>
+
+            <label> 
+                Input 2 <input class="inputEventos2" type="text" placeholder="Comida favorita" oninput="digiteiNoInput2()"> 
+            </label>
             <br>
-            <label> Input 3 <input class="inputEventos3" type="text" placeholder="Alerta na tela > Botão2" > </label>
+
+            <label> 
+                Input 3 <input class="inputEventos3" type="text" placeholder="Alerta na tela > Botão2" > 
+            </label>
             <br>
+
             <button class="b1-eventos" onclick="eventoClickB1()"> BOTÃO1 </button>
 
             <button class="b2-eventos" onclick="eventoClickB2()"> BOTÃO2 </button>
@@ -590,22 +636,24 @@
         </div>
 
     <p>
-        Veja algumas outras possibilidades na lista >> <button> <a href="Outros/lista-de-eventos.html" target="_blank"> Lista de Eventos </a> </button> 
+        Veja algumas outras possibilidades na lista >> <button class="button3"> <a href="Outros/lista-de-eventos.html" target="_blank"> Lista de Eventos </a> </button> 
     </p>
 
 </div>
 
 <div class="div9">
 
-    <h3> Add Event Listener </h3>
+    <h3 id="addeventlistener">  🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 Add Event Listener 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄  </h3>
 
     <p>
-        O <b>addEventListener</b> permite adicionar um evento a partir de uma ação específica pré selecionada, como um click ou um change por exemplo. <br>
-
-        <div>
+        O <b>addEventListener</b> permite adicionar um evento a partir de uma ação específica pré selecionada, como um click ou um change por exemplo:  <br>
+    </p>
+        <div class="exemplos">
             <h4> Exemplo </h4>
+            Informa a alteração do <b>select</b> no console: <br>
+
             <br>
-            <input class= "inputAel" type="text" placeholder="Digite seu nome" >
+            <input class= "inputAel" type="text" placeholder="Exemplo" >
 
             <select class="selectAel">
                 <option> 1 </option>
@@ -614,7 +662,14 @@
             </select>
 
             <button class="buttonAel"> Clique aqui </button>
-        </div> <br>
+        </div> 
+        <br>
+
+        <div class = 'code'>
+            <b>Constantes usadas no exemplo:</b> <br>
+            const select = document.querySelector(".selectAel") <br>
+        </div>
+        <br>
 
         No exemplo acima foi usado um <b>addEventListener</b> para quando o <b>select</b> for alterado (evento "change") ele executar uma função que mostra uma mensagem no console:
 
@@ -623,22 +678,25 @@
             console.log("O select foi alterado!") <br>
             })<br>
         </div>
+        <p>
         ou 
+        </p>
         <div class="code">
             function valorAlterado() { <br>
             console.log("O select foi alterado! 2ª forma")  } <br>
             <br>                                                
             select. addEventListener("change", valorAlterado)
         </div>
-
+    <p>
         Também há uma outra forma de fazer esse código para capturar algumas informações do evento.<br>
         Para pegar informações do evento coloca qualquer palavra no parentêses do "function" e console.log (event):
-
+    </p>
         <div class="code">
             function valorAlterado(event) {<br>
             console.log(event)  } <br>
             select. addEventListener("change", valorAlterado) <br>
         </div>
+    <p>
 
         <b>Obs:</b> A lista de eventos é a mesma que vimos anteriormente, a diferença é que eles vem com a palavra "on" no inicio, e no addEventListener eles vem sem a palavra "on".
     </p>
@@ -646,18 +704,21 @@
 
 <div class="div10">
 
-    <h3> Switch Case </h3>
+    <h3 id="switchcase">  🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 Switch Case 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄  </h3>
 
     <p>
         O <b>switch case</b> é uma estrutura de controle de fluxo que permite executar diferentes blocos de código com base em uma resposta específica ( exemplo: 1, 2, ou 3), diferente do if e else que usa condições
         ( exemplo: de 1 a 5, de 5 a 10, maior que 10, etc), o switch usa respostas específicas, exemplo: <br>
         <br>
+    </p>
+        <div class="exemplos">
         QUAL DIA DA SEMANA ENTRE SEGUNDA A SEXTA VOCÊ PREFERE? (Digite de 1 a 5)<br>
         <br>
         <input input="respostaSC" id="diaDaSemana" type="number" >
         <br>
         Resposta: <p id="s-case"></p>
         <br>
+        </div>
        
         <div class="code">
         switch (diaDaSemana.value) {   <br>
@@ -681,7 +742,7 @@
                 respostaSwitch.innerHTML = "Dia inválido" <br>
         } <br>
         </div>
-
+    <p>
         <b>Obs:</b> Eu usei o Switch Case dentro de uma function > addEventListener para eu pegar o que tava escrito no input e mostrar na tela. (Na dúvida, vale conferir).
     </p>
 
@@ -689,7 +750,7 @@
 
 <div class="div11">
 
-    <h3> Set Time Out e Set Interval </h3>
+    <h3 id="settimeoutsetinterval">  🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 Set Time Out e Set Interval 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄  </h3>
 
     <p>
         O <b>setTimeout</b> é uma função que permite executar um bloco de código após um determinado tempo, exemplo: depois de 10 segundos no site executar um alert dando bom dia (uma vez só). <br>
@@ -697,7 +758,7 @@
         o <b>setInterval</b> é uma função que permite executar um bloco de código a cada determinado tempo, exemplo: a cada 10 segundos no site executar um alert dando bom dia (várias vezes). <br>
 
         Construção: <br>
-
+    </p>
         <div class="code">
             <b>setTimeout</b>(function () {  ---------------> Coloca o que vai ser executado <br>
             console.log("Olá, seja bem-vindo!")                 <br>
@@ -709,36 +770,39 @@
             console.log("Olá, seja bem-vindo!")<br>
             }, 10000)  -----------------------------> 10000 milissegundos = 10 segundos  <br> 
         </div>
-
+    <p>
         <b>Obs:</b> Você pode nomear essas funções set com se fosse uma variável, para depois por exemplo usar o <b>clearTimeout</b> ou <b>clearInterval</b> para cancelar a execução da função. <br>
         exemplo: <br>
+    </p>
 
         <div class="code">
-            let tempo = setInterval(function () {  ---------------> Coloca o que vai ser executado <br>
+            let <b>tempo</b> = setInterval(function () {  ---------------> Coloca o que vai ser executado <br>
             console.log("Olá, eu sou Tom!")                 <br>
             }, 1000)  ------------------------------> 1000 milissegundos = 1 segundos<br>
     <br>
-            clearInterval(tempo) --------------------------> Cancela (pausa) a execução da função
+            clearInterval(<b>tempo</b>) --------------------------> Cancela (pausa) a execução da função
         </div>
 
+        <div class="exemplos">
         Exemplo na prática:
     </p>
 
-        <h3 id="timeNumber"> 00 </h3>
+        <h4 id="timeNumber"> 00 </h4>
         <button id = "start"> Iniciar </button>
         <button id = "pause"> Pausar </button>
+        </div>
 
 </div>
 
 <div class="div12">
 
-    <h3> For </h3>
+    <h3 id="for">  🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 For 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄  </h3>
 
     <p>
         A estrutura de repetição <b>for</b> é usada para repetir um bloco de código um determinado número de vezes. <br>
         <b>Obs:</b> É usado uma váriavel para dizer a quantidade de vez que o bloco de código vai ser repetido, normalmente se usa a letra "i" para representar essa variável. <br>
         Construção: <br>
-
+    </p>
         <div class="code">
             for ( let i = 0; i < 11; i++ ) {  <br>  
             console.log (i)  <br>
@@ -746,25 +810,26 @@
             <br>
             Então o i = 0 até chegar em i < 11 vai se repetir (1++ = soma mais 1) até atingir essa regra. <br>
         </div>
-
+    <p>
         Exemplo prático: Escrever no Console os nomes da lista abaixo: <br>
-
+    </p>
         <div class="code">
             for (let i = 0; i < user.length; i++) {   <br>
                 console.log(user[i]) <br>
             } <br>
         </div> 
+    <p>
         
-        <b>Obs:</b> O atributo .length é para pegar o tamanho do array, ou seja, quantas pessoas tem na lista. <br>
+        <b>Obs:</b> O atributo <b>.length</b> é para pegar o tamanho do array, ou seja, quantas pessoas tem na lista. <br>
         <br>
         <b> Break </b> é usado para parar o loop (interromper o código). <br>
-        <b> Continue </b> é usado para pular uma interação do loop (interromper a interação atual e ir para a próxima). <br>
+        <b> Continue </b> é usado para pular uma interação do loop (interromper a interação atual e ir para a próxima). 
     </p>
-
-    <p>
-       
-
-        Buscador de Contatos <br>
+    <br>
+    <br>
+    <div class = "exemplos">
+        <p>
+        <b>Buscador de Contatos</b> 
         <br>
 
         Contatos: Rodolfo Paulo Aline e Maria <br><br>
@@ -775,24 +840,32 @@
       
         <button id="buttonfor"> Buscar </button>  
 
-        <p id="pfor"></p>
-
+            <p id="pfor"></p>
+        </p>
+    </div>
+    <p>
+    <b>Obs:</b> Nesse exemplo acima eu coloquei o <b>for</b>, e dentro dele um <b>if</b> para verificar se o nome digitado no input era igual ao nome da lista, se fosse ele mostrava na tela, se não fosse ele mostrava que não tinha
+    encontrado. 
+    Também usei um <b>addEventListener</b> para quando apertar o botão de "Buscar" ele executar o <b>for</b>.
     </p>
+    <br>
+    <br>
 
     <h4> For of </h4>
     <p>
         O <b>for of</b> é usado para iterar (mostrar) os itens de um array, como por exemplo essa lista de nomes que fizemos acima, exemplo: <br>
         <br>
         Construção: <br>
-
+    </p>
         <div class = "code">
-            const contactsForof = ['Rodolfo', 'Maria', 'Paulo', 'Aline'] <br>
+            const <b>contactsForof</b> = ['Rodolfo', 'Maria', 'Paulo', 'Aline'] <br>
             <br>
-            for (const name of contactsForof) { <br>
+            for (const <b>name</b> of <b>contactsForof</b>) { <br>
             <br>
-            console.log(name) } <br>
+            console.log(<b>name</b>) } <br>
             <br>
         </div> 
+    <p>
 
         <h4> For in </h4>
     <p>
@@ -801,22 +874,22 @@
         Construção: <br>
 
         <div class = "code">
-            for (const key in userForin) { <br>
+            for (const <b>key</b> in <b>userForin</b>) { <br>
 
-            console.log(key) ----------------> // Mostra as chaves do objeto (name, age, city) <br>
+            console.log(<b>key</b>) ----------------> // Mostra as chaves do objeto (name, age, city) <br>
 
-            console.log(userForin[key]) ------> // Mostra os valores do objeto (Cesar, 28, São Paulo) <br>
+            console.log(<b>userForin[key]</b>) ------> // Mostra os valores do objeto (Cesar, 28, São Paulo) <br>
             } <br>               
         </div> 
 
         Se quisermos pegar a <b>resposta completa</b> do objeto (valores e chaves) fazemos assim: <br>
         <br>
         <div class = "code">
-            for (const key in userForin) { <br>
+            for (const <b>key</b> in <b>userForin</b>) { <br>
 
-            console.log ( key + " : " + userForin[key] )  --------------> // Forma mais simples <br>
+            console.log ( <b>key</b> + " : " + <b>userForin[key]</b> )  --------------> // Forma mais simples <br>
 
-            console.log (`${key} : ${userForin[key]}`) ----------------> // Mais profissional <br>
+            console.log (`${<b>key</b>} : ${<b>userForin[key]</b>}`) ----------------> // Mais profissional <br>
             }              
         </div> 
     </p>
@@ -825,29 +898,32 @@
 
 <div class="div13">
 
-    <h3> While e Do While </h3>
+    <h3 id="whileedowhile">  🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 While e Do While 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄  </h3>
 
     <p>
-        o <b>while</b> é usado para repetir um bloco de código com uma <b>condição</b>, enquanto a condição for verdadeira ele vai repetir a ação, exemplo: <br>
+        O <b>while</b> é usado para repetir um bloco de código com uma <b>condição</b>, enquanto a condição for verdadeira ele vai repetir a ação, exemplo: <br>
         <br>
+    </p>
         <div class="code">
             while (condição) {  <br>
                 código que vai rodar <br>   
             } <br>
         </div> 
-
+    <p>
         Já o <b>do while</b> primeiro executa o código e depois verifica a condição, exemplo: <br>
         <br>
+    </p>
         <div class="code">
             do {  <br>
                 código que vai rodar <br>   
             } while (condição); <br>
         </div>  
+    <p>
 
         <b>Obs:</b> Assim como visto anteriormente o <b>break</b> e o <b>continue</b> também podem ser usados aqui. <br>
-    </p>
-    <p>
-        
+    
+    
+        <div class="exemplos">
 
             Buscador de Contatos <br>
             <br>
@@ -862,14 +938,17 @@
 
             <p id="pw"></p>
 
-        </p>
-
+        </div>
+        <br>
+        <b>Obs:</b> Esse exemplo é parecido com o que fizemos com o <b>for</b>, porém nesse caso eu usei o <b>while</b>, e dentro dele um <b>if</b> para verificar se o nome digitado no input 
+        era igual ao nome da lista.
+    </p>
 
 </div>
 
 <div class="div14">
 
-    <h3> For Each </h3>
+    <h3 id="foreach">  🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 For Each 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄  </h3>
 
     <p>
         O <b>forEach</b> utiliza um array interligado a ele para mostrar mais algumas informações que os anteriores que vimos até agora não mostram, como por exemplo o <b>index</b> (posição do item 0, 1, 2, 3, no array), 
@@ -877,6 +956,7 @@
         <br>
         
         Array e item:<br>
+    </p>
         <div class = "code">
           const <b>array</b>Users = [ <br>
            <b> { name: 'Rodolfo', age: 33, contact: '(19) 94343-3434' }, ----------> Item </b> <br>
@@ -885,22 +965,31 @@
             { name: 'Maria', age: 12, contact: '(14) 94343-3476' }, <br>
           ]
         </div> 
+    <p>
        <br>
        Construção:
+    </p>
         <div class = "code">
            <b>array.forEach(element => {  </b>    -----------------> (=>) Arrow function, a mesma coisa que uma function normal <br>
                 (código a ser executado) <br>
             <b>});</b> <br>
         </div>
+    <p>
         <br>
         <b>Obs:</b> Se na hora de usar o index para mostrar as posições do array, você não quiser começar com o 0, basta usar (index + 1) no lugar do index.
         <br>
-        Exemplo prático: <br>
+        <br>
+
+
+        Exemplo prático: 
+        <br>
+    </p>
         <div class="code">
-            arrayUsers.forEach((item, index) => {  <br>
-                console.log(`${index + 1} - Nome: ${item.name} - Idade: ${item.age} - Telefone: ${item.contact}`) <br>
+            arrayUsers.forEach((<b>item</b>, <b>index</b>) => {  <br>
+                console.log(`${<b>index</b> + 1} - Nome: ${<b>item</b>.name} - Idade: ${<b>item</b>.age} - Telefone: ${<b>item</b>.contact}`) <br>
             }); <br>
         </div>
+    <p>
         <br>
        Resultado: no console:
        <br>
@@ -911,6 +1000,10 @@
     </p>
 
 </div>
+
+  <button class="b-end3"> <a href="#titulo"> Voltar para o começo  </a> </button>
+  <br>
+  <br>
 
 
 

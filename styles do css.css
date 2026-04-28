@@ -205,7 +205,9 @@ text-decoration: underline;
     border: 3px solid #000000;
     border-radius: 8px;
     background-color: #F15025;
-    margin-left: 1350px;
+     position: fixed; 
+    bottom: 30px; 
+    right: 30px;
 }   
 
 .b-end2 a{

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="script2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Datatype:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@700&display=swap" rel="stylesheet">
+    <!-- Link para ligar o JavaScript ao HTML -->
+    <script src="script2.js" defer></script>
+   
+
+    <title>Java Script Parte 2</title>
+    
+</head>
+<body>
+
+<div>
+        <h1 id="titulo"> Aprendendo Java Script Parte 2 </h1>
+</div>
+
+
+<div class="divbutton">
+    <h2>Veja também > > </h2>
+    
+    <button class="button"> <a href="index.html"> HTML </a> </button>
+    <button class="button"> <a href="Página do CSS.html"> CSS </a> </button>
+    <button class="button2"> <a target="_blank" href="Desafio do CSS/desafio2.html"> Pág. Desafio 2 </a> </button>
+</div>
+
+<div>
+    
+<h2> Links dos Tópicos > > >  </h2>
+
+    <header>
+         
+        <ul>
+            <li> <a href="#fParametros">Function / Parâmetros</a> </li>
+            <li> <a href="#fReturn">Function / Return</a></li>
+            <li> <a href="#objetos">Objetos</a></li>    
+            <li> <a href="#arrays">Arrays</a></li>
+            <li> <a href="#ifeelse">If e Else</a></li>
+            <li> <a href="#getelement">Get Element</a></li>
+            <li> <a href="#queryselector">Query Selector</a></li>
+            <li> <a href="#eventos">Eventos</a></li>
+            <li> <a href="#addeventlistener">Add Event Listener</a></li>
+            <li> <a href="#switchcase">Switch Case</a></li>
+            <li> <a href="#settimeoutsetinterval">Set Time Out e Set Interval</a></li>
+            <li> <a href="#for">For in/of</a></li>
+            <li> <a href="#whileedowhile">While e Do While</a></li>
+            <li> <a href="#foreach">For Each</a></li>
+        </ul>
+    </header>
+
+</div>
+
+<div class="div0">
+ <h3 id="fParametros">   🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 Function / Parâmetros 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄   </h3>
+
+    <p> 
+        Uma function com parâmetros é uma function que recebe valores como <b>entrada</b> para poder executar uma ação.
+        <br>
+        Exemplo: 
+    </p>
+    <p>
+        <div class="code">
+            function <b>myName</b> (name){ ---------------> (name) variável da função <br>
+            console.log(`Olá ${name} como você ta ?`)<br>
+            } <br>
+            <b>myName</b>("Cesar")   -------------------> (Cesar) valor da variável
+        </div>
+    </p>
+    <p>
+        Essa função foi "solicitada" com o parâmetro "Cesar", que foi atribuido a variável "name", e a mesma poderia ser solicitada mais vezes, 
+        com diferentes nomes, exemplo:
+        <br>
+        <div class="code">
+            myName("Cesar") <br>
+            myName("Maria") <br>
+            myName("João") <br>
+        </div>
+    </p>
+    <p>
+        Também é possível fazer funções com duas variáveis ou mais, tanto com palavras como com números, exemplo:
+        <br>
+        <div class="code">
+            function soma (num1, num2, num3){ ----------------> (num1, num2, num3) variáveis da função <br>
+            console.log(num1 + num2 + num3) <br>
+            } <br>
+            soma(10, 20, 30) 
+        </div>
+    </p>
+    <p>
+        Também é possível fazer funções dentro de funções.
+        <br>
+       É possível fazer uma variável com um valor padrão caso não haja nenhum valor atribuido a ela, isso somente se a variável
+       estiver vazia, caso atribua um valor a ela este valor padrão será ignorado, também serve para as funções com com mais variáveis, exemplo:
+       <br>
+       <div class="code">
+            function myName (name = "Sem nome", age = "Não informado"){
+                console.log(`Olá ${name} , sua idade é ${age} ?`)
+            }
+
+            myName() -----------------> Se não for atribuido nenhum valor a "name", será atribuido "Sem nome"
+            A variável com valor seria por exemplo: myName("Cesar", "28")
+        <br>
+        </div>
+    </p>
+
+    <h4 id="fReturn"> Function / Return</h4>
+
+    <p>
+        Uma função é um trecho de códigos que é executado quando é chamado, normalmente é uma função do tipo <b>void</b>, ou seja, não retorna nenhum valor,
+        e existe a função que retorna o valor, são as que tem o atributo <b>return</b> no final dos códigos, exemplo:
+    </p>
+        <div class="code">
+            function soma(value, value2) {  --------------------> void - não tem a função de return <br>
+            } <br>
+            const resultVoid = soma(10, 20)  -------------> variável que recebe o valor da função <br>
+            console.log(resultVoid + " resultado") --------> a resposta da erro por que não há retorno (não sai de dentro da função) <br>
+        </div>
+    <p>
+        Se você ver no "inspecionar" na aba "Console" a resposta dessa função será: "undefined resultado" pois para essa variável <b>result</b> funcionar
+        é preciso que o valor da função seja retornado, exemplo:
+        <br>
+    </p>
+        <div class="code">
+            
+            function soma2(value, value2) { -----------------> agora usando return <br>
+                return value + value2        -------------------> agora usando o return no que você quiser retornar <br>
+            } <br>
+            const resultReturn = soma2(10, 20) <br>
+            console.log(resultReturn + " resultado") ------> agora com o return, a resposta vai dar correta (30 resultado) <br>
+            <br>
+            <b>Ou, também pode ser assim: Criando a variável com o retorno da função</b> <br>
+            <br>
+            function soma3(value, value2) { ----------------> return <br>
+                const result = value + value2 <br>
+                return result      -------------------------> retornando função direto <br>
+            } <br>
+            const resultFinal = soma3(10, 20) <br>
+            console.log(resultFinal + " resultado") ------------> com return, resposta correta (30 resultado) <br>
+            
+        </div>
+    <p>
+        <b>Obs:</b> As variáveis dentro da função não são as mesmas variáveis de fora da função, elas são diferentes, não interferem uma na outra.
+        <br>
+    </p>
+        <div class="exemplos">
+            <b>Mini Desafio: Caixa de Mercado</b> <br>
+            1- Somar os produtos <br>
+            2 - Aplicar 10% de desconto nos produtos acima de R$30,00 <br>
+            <br>
+            Valor dos Produtos = 10, 244, 99, 2, 20 e 33. <br>
+            <br>
+            <p id="p-caixa"> </p>
+        </div>
+    <p>
+        <b>Resposta: </b><br>
+        Usei o <b>for</b> para percorrer os numeros do <b>array</b>(cart), e o <b>if</b> para verificar nesses numeros se o valor era maior que 30; <br>
+        Depois fiz duas <b>variáveis</b> (prodComDesconto e prodSemDesconto) do tipo <b>array</b> para guardar os valores que iam ser selecionados pelo <b>if</b> e <b>else</b>; <br>
+        O <b>push</b> serve para adicionar valores a um array, foi ele que adicionou os valores selecionados dentro das variáveis; <br>
+        Depois usei as <b>functions</b> para somar os valores dentro das variáveis;<br>
+        A função <b>Number</b> dentro das functions serve para converter os valores em numeros, pois por padrão eles são <b>strings</b>;<br>
+        Para finalizar criei uma <b>variavel (valorTotal)</b> somando os dois valores, e fiz um <b>inner.HTML</b> para escrever o resultado na tela.
+        <br>
+        <br>
+        <img src="./imagens/codigosJavaScript-DesafioCaixaDeMercado.png" alt="Código do Desafio Caixa de Mercado">
+    </p>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <button class="b-end3"> <a href="#titulo"> Voltar para o começo  </a> </button>
+</body>
