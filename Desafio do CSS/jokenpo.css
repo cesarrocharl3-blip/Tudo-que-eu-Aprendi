@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Denk One", sans-serif;
+}
+body{
+    background-color: rgb(165, 165, 165);
+}
+
+conteiner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.title{
+    font-family: "Trade Winds", system-ui;
+    font-size: 90px;    
+}
+
+.result{
+    font-size: 35px;
+    margin: 20px;
+}
+
+.placar {
+font-size: 35px;
+}
+
+.ps {
+    color: rgb(22, 141, 22);
+}
+
+.ia {
+    color: rgb(158, 23, 23);
+}
+
+img{
+    border-radius: 10px;
+    height: 130px;
+    width: 150px;
+}
+
+button{
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+}
+
+.pedra{
+    background-color: #605F5E;
+
+}
+
+.papel{
+    background-color: #247BA0;
+    margin-left: 15px;
+    margin-right: 15px; 
+ 
+}
+
+.tesoura{
+    background-color: #F3A712;
+   
+}
+

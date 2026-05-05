@@ -1,11 +1,11 @@
 // Function
 
-function myName(name) { // (name) variável da função
+function myName2(name) { // (name) variável da função
 
     console.log(`Olá ${name} como você ta ?`)
 }
 
-myName("Cesar") // (Cesar) valor da variável
+myName2("Cesar") // (Cesar) valor da variável
 
 // Function com duas variáveis
 
@@ -17,11 +17,11 @@ soma(10, 20, 30)
 
 // Function com valor padrão
 
-function myName(name = "Sem nome", age = "Não informado") {
+function myName2(name = "Sem nome", age = "Não informado") {
     console.log(`Olá ${name} , sua idade é ${age} ?`)
 }
 
-myName() // Se não for atribuido nenhum valor a "name", será atribuido "Sem nome"
+myName2() // Se não for atribuido nenhum valor a "name", será atribuido "Sem nome"
 
 //Function / Return
 
@@ -61,7 +61,7 @@ console.log(resultFinal + " resultado") // agora com o return, a resposta vai da
 //2 - Aplicar 10% de desconto nos produtos acima de R$30,00 
 //Valor dos Produtos = 10, 244, 99, 2, 20 e 33. 
 
-const cart = [10, 244, 99, 2, 20, 33]
+const cart = [10, 244, 99, 2, 20, 33, 250]
 const prodComDesconto = []
 const prodSemDesconto = []
 
@@ -71,7 +71,7 @@ const escrever = document.getElementById("p-caixa")
 for (let i = 0; i < cart.length; i++) {
 
     if (cart[i] > 30) {
-        prodComDesconto.push ((cart[i] * 0.90).toFixed(2))
+        prodComDesconto.push((cart[i] * 0.90).toFixed(2))
     }
 
     else {
@@ -80,7 +80,7 @@ for (let i = 0; i < cart.length; i++) {
 }
 
 function comDesconto(prodComDesconto) {
-    const somaDesconto = Number(prodComDesconto[0]) + Number(prodComDesconto[1]) + Number(prodComDesconto[2])
+    const somaDesconto = Number(prodComDesconto[0]) + Number(prodComDesconto[1]) + Number(prodComDesconto[2]) + Number(prodComDesconto[3])
     return somaDesconto
 }
 
@@ -96,3 +96,46 @@ semDesconto(prodSemDesconto)
 const valorTotal = comDesconto(prodComDesconto) + semDesconto(prodSemDesconto)
 
 escrever.innerHTML = (`Valor Total: ${valorTotal}`)
+
+// Jeito mais correto de se fazer:
+
+const cart1 = [10, 244, 99, 2, 20, 33, 250]
+
+const escrever1 = document.getElementById("p-caixa2")
+let totalValue = 0
+let discauntValue = 0
+let economyValue = 0
+
+cart1.forEach(value => {
+
+    totalValue += value // esse código é a mesma coisa que: totalValue = totalValue + value
+
+    value > 30 ? discauntValue += value * 0.9 : discauntValue += value
+
+    economyValue = totalValue - discauntValue
+})
+
+escrever1.innerHTML = `
+<p> Valor total com desconto: R$ ${discauntValue.toFixed(2)}</p>
+<p> Valor total sem desconto: R$ ${totalValue.toFixed(2)}</p>
+<p> Valor economizado: R$ ${economyValue.toFixed(2)}</p>`
+
+// Arrow Functions
+
+//Function Normal 
+function apresentação(name, age, valueA, valueB) {
+
+    return (`Olá eu sou o ${name}, tenho ${age} anos. A soma é ${valueA + valueB}.`)
+}
+console.log(apresentação("Cesar", 28, 25, 50))
+
+// Arrow Function com 1 parâmetro
+const myName = name => `Olá, meu nome é ${name} .`
+
+console.log(myName("Cesar"))
+
+// Arrow Function
+const apresent = (name, age, valueA, valueB) => (`Olá eu sou o ${name}, tenho ${age} anos. A soma é ${valueA + valueB}.`)
+
+console.log(apresent("Cesar", 28, 25, 50))
+
