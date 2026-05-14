@@ -238,26 +238,299 @@
         <img src="./imagens/ArrowF-MaisDe1parametro.png" alt="Código da Arrow Function com mais de 1 parâmetro">
 
         <h4 id="fanonima"> Funções Anônimas </h4>
-        
-        <p> 
-            No nosso <b>Mini Desafio: Caixa de Mercado (Eficiente) </b> nós usamos uma função anônima junto com o <b>forEach</b>, é uma função usando a <b>Arrow Function</b> que não tem 
+
+        <p>
+            No nosso <b>Mini Desafio: Caixa de Mercado (Eficiente) </b> nós usamos uma função anônima junto com o
+            <b>forEach</b>, é uma função usando a <b>Arrow Function</b> que não tem
             nomenclatura, então por padrão é anônima.
         </p>
-        
-        
-        
-
-
-
-
-
 
     </div>
 
+    <div class="div3">
+
+        <h3 id="enum"> 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 ENUM 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄</h3>
+
+        <p>
+            O <b>ENUM</b> é uma ferramenta para criar constantes, mais corretamente dizer que é uma ferramenta para
+            <b>gravar</b> valores, e posteriormente utilizar esses valores <b>selecionando-os</b>
+            de forma que ajuda a mitigar os erros humanos, de digitação.
+        </p>
+        <br>
+
+        <img src="./imagens/ENUM .png" alt="Código de ENUM">
+        <br>
+
+        <p>
+            <b>Obs:</b> Quando o ENUM é usado, é possível alterar os valores, apenas alterando o <b>"gabarito"</b> ao
+            ser criado (os valores serão alterados em todos os lugares onde ele foi chamado). <br>
+            A forma mais correta de se escrever ENUM é em <b>Caixa Alta</b>.
+        </p>
+        <br>
+
+    </div>
+
+    <div class="div4">
+
+        <h3 id="map"> 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 Map 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄</h3>
+
+        <p>
+            O <b>Map</b> é uma ferramenta para mapear o <b>Array</b>, ou seja, ele pecorre o array e aplica uma função
+            em cada elemento do array, retornando um novo array com os valores modificados. <br>
+            Ele não altera o array original, e sim cria um novo array com as modificações. <br>
+            <br>
+            Essa ferramenta aceita 3 parâmetros:
+            <br>
+            1 - <b>item</b>: O item atual que está sendo percorrido (linha e/ou valor em si). <br>
+            2 - <b>index</b>: Posição (índice) do item atual. <br>
+            3 - <b>array</b>: O array completo. <br>
+            <br>
+            Exemplo: <br>
+        </p>
+        <br>
+
+        <div class="code">
+            <b>const arrayNumber = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] </b><br>
+            <br>
+            const exemplo1 = arrayNumber.map(item => item * 2) <br>
+            console.log('Exemplo 1' + exemplo1) <br>
+            <br>
+            const exemplo2 = arrayNumber.map((item, index) => `O número ${item} está na posição ${index}`) <br>
+            console.log('Exemplo 2' + exemplo2) <br>
+            <br>
+        </div>
+
+        <p>
+            <b>Obs:</b> Usamos a <b>Arrow Function</b> para otimizar nosso código, lembrando que quando pulamos a linha
+            precisamos colocar o <b>Return</b>, pois a arrow function já tem um retorno implícito se for
+            em apenas 1 linha. <br>
+            No exemplo abaixo, pulamos a linha, então precisamos colocar o <b>Return</b>. <br>
+        </p>
+        <br>
+
+        <div class="code">
+            const exemplo3 = arrayNumber.map((item) => { <br>
+            const vezes10 = item * 10 <br>
+            return vezes10 <br>
+            }) <br>
+            console.log('Exemplo 3' + exemplo3) <br>
+        </div>
+
+        <h4> Map - Desafio 1 (Pulseira VIP) </h4>
+
+        <p>
+            Desafio da Pulseira - É dado um array com uma lista de pessoas, e se é ou não VIP, se for colocar a cor da
+            pulseira preta, caso contrário, verde. <br>
+            Abaixo o código: <br>
+        </p>
+        <br>
+        <div class="code">
+            const <b>list</b> = [ <br>
+            { name: 'Rodolfo', vip: true }, <br>
+            { name: 'Maria', vip: false }, <br>
+            { name: 'João', vip: true }, <br>
+            { name: 'Bruno', vip: true }, <br>
+            { name: 'Carla', vip: false }, <br>
+            { name: 'Ana', vip: true }, <br>
+            { name: 'Julio', vip: false }, <br>
+            ] <br>
+        </div>
+
+        <br>
+        <p>
+            <b>Cosntrução:</b> A Construção dessa ferramenta consiste em usar uma <b>constante (newList)</b> que
+            receberá a função <b>map</b>, depois a <b>array</b> que
+            receberá a função map (const <b>newList</b> = <b>list</b>.map), depois o nome do <b>item</b> (user) + a
+            função, que no caso usamos uma <b>arrow function =></b>.
+            <br>
+            <br>
+            A partir disso foi criado um <b>map</b> newList, dentro do map uma constante <b>newUser</b> para alterar o
+            <b>name</b> e <b>vip</b> para <b>nome</b> e <b>pulseira</b>, e nessa alteração
+            ja criamos um <b>if/else</b> usando o operador ternário para aplicar uma regra, onde se for <b>true</b>
+            recebe preta, se não, verde. E por fim colocar um <b>return</b> para retornar a resposta:
+            <br>
+        </p>
+
+        <div class="code">
+            const <b>newList</b> = <b>list</b>.map (user => { <br>
+
+            const <b>newUser</b> = { <br>
+            nome: user.name, <br>
+            pulseira: user.vip ? "Preta" : "Verde" <br>
+            } <br>
+            return <b>newUser</b> <br>
+            }) <br>
+
+            console.log(<b>newList</b>)
+        </div>
 
 
+        <h4> Map - Desafio 2 (Alunos) </h4>
 
+        <p>
+            Neste desafio teremos uma lista de alunos e notas e deverá passar quem tem a nota de 5 ou mais, caso
+            contrário reprova.
+            <br>
+        </p>
+        <br>
+        <div class="code">
+            const students = [ <br>
+            { name: 'Rodolfo', testGrade: 7 }, <br>
+            { name: 'Maria', testGrade: 5 }, <br>
+            { name: 'João', testGrade: 8 }, <br>
+            { name: 'Bruno', testGrade: 9 }, <br>
+            { name: 'Carla', testGrade: 3 }, <br>
+            { name: 'Ana', testGrade: 2 }, <br>
+            { name: 'Julio', testGrade: 10 } <br>
+            ]; <br>
+        </div>
 
+        <br>
+
+        <p>
+            <b>Resolução:</b> (Resposta no Console)
+        </p>
+        <img src="./imagens/map-desafio-script2.png" alt="Resolução do desafio 2 do map"> <br>
+        <br>
+    </div>
+
+    <div class="div5">
+
+        <h3> 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 Reduce 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 </h3>
+
+        <p>
+            O <b>Reduce</b> é usado para transformar um array em um único valor, por exemplo se você tem uma array com
+            algum valor x de item, e você quer somar esses valores pra saber o valor x total da sua
+            array, para isso você usaria o reduce.
+            <br>
+            <br>
+            <b>Exemplo de Construção:</b>
+        </p>
+
+        <div class="code">
+            const <b>array</b> = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] <br>
+            <br>
+            const <b>novaArray1</b> = <b>array</b>.reduce((<b>acumulador</b>, <b>valorAtual</b>) => { <br>
+            return acumulador + valorAtual <br>
+            } <b>, 0</b>) <br>
+            <br>
+            console.log('Exemplo 1: ' + <b>novaArray1</b>) -----------> 55 <br>
+            <br>
+            <b>acumulador:</b> Sempre guardar o valor anterior. <br>
+            <b>valorAtual:</b> Sempre guardar o valor atual. <br>
+            <b>0:</b> Valor inicial do acumulador. <br>
+            <br>
+        </div>
+        <p>
+            Então esssa função esta pegando o valor de acumulador (0) mais o valor atual (1, depois 2, depois 3...), e
+            repetindo o processo até o final do array. (até somar toda a array) <br>
+
+            Se o valor do acumulador fosse 10 por exemplo, então ele somaria 10 (valor inicial) + 1 (valor atual) + 2 +
+            3... até o final do array, ou seja ao invés da soma total dar 55, daria 65. <br>
+            <br>
+        </p>
+
+        <h4> Exemplo Prático 1 - Carrinho de Compras </h4>
+
+        <p>
+            Nesse exemplo abaixo eu tenho os produtos e os valores por kilo de cada um, eu quero uma nova array com o
+            valor total da compra, ou seja, <b> transformar estes valores em apenas 1</b>: <br>
+        </p>
+        <div class="code">
+            const <b>cart</b> = {<br>
+            {productName: 'Abóbora', pricePerKg: 5, kg: 1} <br>
+            {productName: 'Pepino', pricePerKg: 3.55, kg: 1.3} <br>
+            {productName: 'Limão', pricePerKg: 1.2, kg: 2} <br>
+            {productName: 'Abacate', pricePerKg: 5.4, kg: 1.67} <br>
+            {productName: 'Morango', pricePerKg: 11.9, kg: 3} <br>
+            }
+        </div>
+
+        <p>
+            <b>Resolução:</b>
+        </p>
+        <img src="./imagens/exemplo-reduce-carrinho-de-compras.png" alt="Exemplo do carrinho de compras"> <br>
+
+    </div>
+
+    <div class="div6">
+        <h3>  🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 Filter 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 </h3>
+
+        <p>
+            O <b>Filter</b> serve para filtrar valor(es) de uma array, por exemplo se você tem uma array com algum valor x de 
+            item, e você quer selecionar apenas os valores maiores ou menores que algum valor, para isso você usaria o filter.
+            <br> 
+            <b>Obs:</b> Assim como o map o <b>item</b> é a variável obrigatória que se utiliza no Filter.
+            <br> 
+            <br>
+            <b>Exemplo:</b>
+        </p>
+
+        <div class="code">
+            const <b>listF</b> = [20, 3, 234, 12, 17, 541, 6, 87, 275, 1000] <br>
+            <br>
+            const <b>listFilter</b> = <b>listF</b>.filter(<b>item</b> => <b>item</b> < 100)
+        </div>
+
+        <p>
+            Nesse caso acima estamos usando o filter para selecionar apenas os itens menores que 100.
+            <br>
+            <b>Obs:</b> Nesse exemplo por ser uma condição simples, conseguimos colocar assim tudo na mesma linha e sem o return, mas caso contrário ficaria como as anteriores.
+        </p>
+       
+    </div>
+
+    <div class="div7">
+        <h4> Desafio Completo: Usando o Map, Filter e Reduce </h4>
+        <p>
+            Neste desafio precisamos cumprir essas 3 regras: <br>
+            1 - Adicionar 10% de valor de mercado a todas as companhias -> <b>MAP</b> <br>
+            2 - Filtrar somente companhias fundadas antes de 1990 -> <b>FILTER</b> <br>
+            3 - Somar o valor de mercado total das empresas fundadas antes de 1990 -> <b>REDUCE</b> <br>
+        </p>
+
+        <div class="code">
+            const companies = [ <br>
+            { name: 'Samsung', marketValue: 50, CEO: 'Kim Hyun Suk', foundedOn: 1938 }, <br>
+            { name: 'Microsoft', marketValue: 415, CEO: 'Satya Nadella', foundedOn: 1975 }, <br>
+            { name: 'Intel', marketValue: 117, CEO: 'Brian Krzanich', foundedOn: 1968 }, <br>
+            { name: 'Facebook', marketValue: 383, CEO: 'Mark Zuckerberg', foundedOn: 2004 }, <br>
+            { name: 'Spotify', marketValue: 30, CEO: 'Daniel Ek', foundedOn: 2006 }, <br>
+            { name: 'Apple', marketValue: 845, CEO: 'Tim Cook', foundedOn: 1976 } <br>
+            ];
+        </div>
+
+        <p> 
+            <b>Resolução:</b> (Resposta no Console)
+        </p>
+        <br>
+
+        <img src="./imagens/desafio-completo-map-filter-reduce.png" alt="Resolução do desafio completo"> <br>
+        <br>
+
+        <p>
+            <b>Resolução de Jeito mais correto:</b>
+        </p>
+        <br>
+
+        <img src="./imagens/desafio-completo-map-filter-reduce-forma-eficiente.png" alt="Resolução do desafio de forma eficiente">
+
+        <p>
+            <b>Obs:</b> Na resolução mais correta podemos ver que ao acabar de fazer uma função, podemos ja referênciar outra logo após colocando
+            um ponto final e continuando a escrever. <br>
+        </p>
+
+    </div>
+
+    <div class="div8">
+
+        <h3> 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 Métodos de Arrays 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 </h3>
+
+        <p> 
+            
+        </p>
+
+    </div>
 
 
 

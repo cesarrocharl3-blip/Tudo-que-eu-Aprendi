@@ -16,6 +16,7 @@ div {
     width: fit-content;
     margin: 10px;
     font-family: "Datatype", monospace;
+    padding: 10px;
 }
 
 #titulo{

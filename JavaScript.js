@@ -459,6 +459,7 @@ do {
 } while (j <= 10);      // condição
 
 //Desafio - While
+console.log('---------- Desafio - While ----------')
 
 const buscarw = document.getElementById('buttonw')
 const nomeContatow = document.getElementById('inputw')
