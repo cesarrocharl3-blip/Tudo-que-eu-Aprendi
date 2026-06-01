@@ -46,7 +46,7 @@
             <li> <a href="#conceitosbasicos">Conceitos Básicos</a> </li>
             <li> <a href="#operadores">Operadores</a></li>
             <li> <a href="#objetos">Objetos</a></li>    
-            <li> <a href="#arrays">Arrays</a></li>
+            <li> <a href="#array">Arrays</a></li>
             <li> <a href="#ifeelse">If e Else</a></li>
             <li> <a href="#getelement">Get Element</a></li>
             <li> <a href="#queryselector">Query Selector</a></li>
@@ -436,6 +436,171 @@
         No array, a ordem dos elementos se inicia no 0, ou seja, o primeiro elemento da array é o 0, o segundo é o 1 e assim por diante.
     </p>
 
+    <h4> Métodos de Array </h4>
+    <p>
+
+        Os métodos de array são funções que podem ser usadas para manipular arrays. Alguns exemplos comuns são:
+        <br>
+        <br>
+
+        <ul>
+        <li><b>Push</b> - Adiciona um item no array, exemplo: </li> <br>
+
+        <div class="code">
+            <b>const</b> arrayUsuarios = [ <br>                
+                { nome: "Cesar", idade: 28 }, <br> 
+            ]<br>        
+            arrayUsuarios.<b>push</b>({ nome: "Lucas", idade: 30 }) <br>
+            <br>
+            <b>// Resultado: </b><br>
+            <b>const</b> arrayUsuarios = <br>
+            [ { nome: "Cesar", idade: 28 },<br>
+            { nome: "Lucas", idade: 30 } ] <br>
+            <br>
+        </div>
+        <br>
+
+        <li><b>Length</b> - Retorna o tamanho da array, a quantidade de itens <b>array.length</b>.  </li><br>
+        <br>
+
+        <li><b>Sort</b> - Ordena a array de acordo com a ordem alfabética ou numérica <b>array.sort</b>.  </li><br>
+        <br>
+
+        <li><b>Delete</b> - Remove um item da array, mas ele deixa o espaço vario no lugar <b>delete array[0(index)]</b>. </li><br>
+        <br>
+
+        <li><b>Every</b> - Verifica se todos os elementos de uma array satisfazem uma determinada condição (true ou false), exemplo: </li><br>
+        <div class="code">
+            <b>const</b> usuarios = [ <br>
+            { name: 'Nico', credit: 600 }, <br>
+            { name: 'Maria', credit: 900 }, <br>
+            { name: 'Joana', credit: 300 }, <br>
+            { name: 'Vanessa', credit: 200 }, <br>
+            ]<br>
+            <br>
+            <b>const</b> isTrue = usuarios<b>.every</b> (user => user.credit > 100) <br>
+            <br>
+            <b>Obs:</b> Todos os usuários tem mais de 100 de crédito ? Resposta: True (pode usar && e || como nos Ternários)
+        </div>
+        <br>
+
+        <li><b>Some</b> - Verifica se pelo menos um dos elementos de uma array satisfazem uma determinada condição (true ou false). </li><br>
+        <br>
+
+        <li><b>Fill</b> - Preenche os elementos de uma array com um valor diferente, exemplo: </li><br>
+        
+        <div class="code">
+            const numeros = [1, 2, 3, 4, 5] <br>
+            numeros.fill(100) <br>--------------------------> coloca o valor que vc quer trocar (100) <br>
+            <br>
+            <b>// Resultado:</b> [100, 100, 100, 100, 100] <br>
+            <br>
+            <b>Obs:</b> Você pode definir a posição inicial e final para preencher a array: 
+            <br>
+            numeros.fill(100, 2, 4) ----> coloca o valor que vc quer trocar (100), a posição que vc quer começar a trocar (2), e a posição que vc quer parar de trocar (4). <br>
+            <br>
+            <b>// Resultado:</b> [1, 2, 100, 100, 5] <br>         
+        </div>
+        <br>
+
+        <li><b>Find</b> - Encontra os itens da array normalmente por nome ou valores, ou o primeiro elemento de uma array que satisfaz uma determinada condição, exemplo: </li><br>
+        <div class="code">
+            <b>const</b> users = [ <br>
+            { <b>name</b>: 'João', credit: 600 },<br>
+            { <b>name</b>: 'Maria', credit: 900 },<br>
+            { <b>name</b>: 'Carlos', credit: 300 },<br>
+            { <b>name</b>: 'Vanessa', credit: 300 },<br>
+            ]
+            <br>
+            <b>const</b> findAUser = users.find(user => user.name === "Maria") <br>
+            <br>
+            <b>// Resultado:</b> { <b>name</b>: 'Maria', credit: 900 } <br>
+            <br>
+            <b>ou</b>
+            <br>
+            <br>
+            const numeros = [1, 2, 3, 4, 5] <br>
+            numeros.find(numero => numero > 3) --------------------------> encontra o primeiro número maior que 3 <br>
+            <b>// Resultado:</b> 4 <br>         
+        </div>
+        <br>
+
+        <li><b>FindIndex</b> - É parecido com o find, porém só diz a posição (index) do item. Se der "-1" quer dizer que não encontrou. (mesma regra do find)</li>
+        <br>
+
+        <li><b>Concat</b> - Junta duas arrays em uma, exemplo: </li> <br>
+
+        <div class="code">
+         const array1 = ['a', 'b', 'c']; <br>
+         const array2 = ['d', 'e', 'f']; <br>   
+         <br>    
+         const array3 = array1.concat(array2); <br>
+         <br>
+         <b>// Resultado:</b> ['a', 'b', 'c', 'd', 'e', 'f'] <br>
+         <br>
+         const numbers1 = [1, 3, 5]; <br>
+         const numbers2 = [2, 4, 6]; <br>  
+         <br>    
+         const numbers3 = numbers1.concat(numbers2); <br>
+         <br>
+         <b>// Resultado:</b> [1, 3, 5, 2, 4, 6] <br> 
+        </div>
+
+        <li><b>Join</b> - Une os itens de uma array em uma string, exemplo: </li> <br>
+
+        <div class="code">
+            const elements = ['Fire', 'Air', 'Water'];
+            <br>
+            const myElements = elements.join('/');
+            <br>
+            <b>// Resultado:</b> "Fire/Air/Water"
+        </div>
+        <br>    
+
+        <li><b>Pop</b> - Remove o último item de uma array. <b>array.pop()</b> </li> <br>
+        <br>
+        
+        <li><b>Shift</b> - Remove o primeiro item de uma array. <b>array.shift()</b> </li> <br>
+        <br>
+
+        <li><b>Slice</b> - Cria uma nova array com os itens selecionados de uma array (não altera a array original), exemplo: <b>array.slice(inicio, fim)</b>  </li> <br>
+        <div class="code">
+            const numbers = ["Jodo", "Maria", "Pedro", "Michele", "Fernanado"];
+            <br>
+            const newArray = numbers.slice(3,4);
+            <br>
+            <b>// Resultado:</b> ["Michele", "Fernanado"] <br>
+            <br>
+            <b>Obs:</b> Se você na posição colocar só um número (index) no slice ele vai pegar desse numero em diante.
+            <br>
+            </div>
+            <br>
+
+        <li><b>Splice</b> - Remove ou substitui itens de uma array (altera a array original), exemplo: <br>
+            <b>array.splice(item que vc quer tirar ou substituir, até qual item vc quer tirar ou substituir, novo item que vc quer adicionar)</b>  </li> <br>
+        <div class="code">
+            const users = ["João", "Maria", "Pedro", "Michele", "Fernando"];
+            <br>
+            users.splice(1, 1, "Patricia");
+            <br>
+            <b>// Resultado:</b> ["João", "Patricia", "Pedro", "Michele", "Fernando"] <br>
+            <br>
+            </div>
+            <br>
+        
+        
+        
+
+        
+
+
+
+
+    
+    </p>
+       
+    
+
 </div>
 
 <div class="div5">
@@ -450,9 +615,12 @@
         <div class="code">
             const notaAluno1 = 8  <br>
             const notaDeCorte = 5 <br>
-            if (notaAluno1 >= notaDeCorte) {  
+            if (notaAluno1 >= notaDeCorte) {
+
                 console.log("Aluno aprovado!");  } <br>
-            else { console.log("Aluno reprovado!"); } <br>
+
+            else { 
+                console.log("Aluno reprovado!"); } <br>
         </div>
     <p>
         <b>Obs:</b> Quando se usa mais de um <b>If</b> pode ter mais que uma condição verdadeira! <br>
