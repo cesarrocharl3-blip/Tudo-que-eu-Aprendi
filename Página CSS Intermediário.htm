@@ -28,7 +28,9 @@
             <h2>Veja também > > </h2>
             <button class="button"> <a href="index.html"> HTML </a> </button>
             <button class="button"> <a href="Página do CSS.html"> CSS </a> </button>
-            <button class="button"> <a target="_blank" href="Desafio do CSS/desafio2.html"> Pág. Desafio 2 </a> </button>
+             <button class="button"> <a href="javascript-parte1.html"> Java Script Parte 1 </a> </button>
+            <button class="buttonDesafio"> <a target="_blank" href="Desafio do CSS/desafio2.html"> Pág. Desafio 2 </a> </button>
+           
 </div>
 
 <div>
@@ -182,7 +184,250 @@
         </p>  
     </div>
 
-<div class="div6">
+
+<div class="div6"> 
+
+    <h3 id="displayFlex"> 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 Display Flex e Posicionamentos 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 </h3>
+
+    <p>
+        O <b> display flex </b> é usado para você alinhar um item dentro de um container, ou seja, para alinhar um item dentro de uma div por exemplo.<br>
+        Exemplo: Para alinhar -> 
+        </p>
+
+    <div class="code">
+        <b>display: flex; <br>
+            justify-content: center; <br>
+             align-items: center; </b>
+    </div>
+
+    <p> 
+        Por padrão itens dentro de uma div ficam como <b> block </b>, ou seja, ocupam a linha toda horizontalmente (imagem lado esquerdo), ja quando é colocado o <b> display flex </b>
+        os itens ficam como <b> inline </b>, ou seja, ocupam somente o espaço necessário, e ficam um do lado do outro (imagem lado direito) <br>
+    </p>
+
+    <img src="/imagens/img display flex.png" alt="Exemplo de display flex" id="imgDF">
+
+    <br>
+    <br>
+    <br>
+
+    <h4> Flex Direction </h4>
+
+    <p> 
+        Dentro do display flex existe várias funções para te ajudar com a disposição dos itens dentro dele, uma delas é a <b>flex-direction</b> que tem as seguintes opções: <br>
+        Exemplo de constução: <b>flex-direction: row;</b>
+        <ul>
+        <li> <b>row</b> - os itens ficam um do lado do outro, na horizontal (padrão)</li> <br>
+        <li> <b>column</b> - os itens ficam um em baixo do outro, na vertical </li><br>
+        <li> <b>row-reverse</b> - os itens ficam um do lado do outro, na horizontal, porém na ordem inversa </li><br>
+        <li> <b>column-reverse</b> - os itens ficam um em baixo do outro, na vertical, porém na ordem inversa </li><br>
+        </ul>
+
+        Veja os exemplos aplicados abaixo: 
+    </p>
+
+    <img src="/imagens/img flex directions.png" alt="Exemplo de flex direction" id="imgFD">
+
+    <br>
+    <br>
+    <br>
+
+
+    <h4> Flex Wrap </h4>
+
+    <p>
+        O <b>flex-wrap</b> é usado para ter a quebra de linha, caso contrário os itens ficam todos em uma linha só, e quando chegar no final da linha eles vão ficando cada vez menores
+        para caber tudo, com o <b> flex-wrap: wrap;</b> os itens vão para a linha de baixo quando chegar no limite.
+    </p>
+
+    <img src="/imagens/img flex directions - wrap.png" alt="Exemplo de flex wrap" id="imgWrap">
+
+    <br>
+    <br>
+    <br>
+
+    <h4> Flex Flow </h4>
+     
+    <p>
+        O <b>flex-flow</b> é uma propriedade que combina as propriedades <b>flex-direction</b> e <b>flex-wrap</b> em uma única linha de código, é apenas para economizar linha
+        e não precisar escrever as duas propriedades caso vc esteja usando as duas, exemplo: <br>
+        <b>flex-flow: row wrap;</b> (a ordem é importante, primeiro a direção e depois o wrap) <br>
+        <b>flex-flow: column wrap;</b>
+    </p>
+
+    <br>
+    <br>
+    <br>
+
+    <h4> Justify Content </h4>
+
+    <p> 
+        O <b>justify-content</b> serve para alinhar os itens dentro do container, exemplo: <b>justify-content: center;</b>. Porém ele tem diversos tipode de alinhamentos diferentes:<br>
+         
+        <ul> 
+            <li> center - alinha os itens ao centro</li> <br>
+            <li> flex-start - alinha os itens ao início do container</li> <br>
+            <li> flex-end - alinha os itens ao final do container</li> <br>
+            <li> space-between - distribui os itens com espaço igual <b>entre eles</b></li> <br>
+            <li> space-around - distribui os itens com espaço igual <b>ao redor </b>deles </li> <br>
+        </ul>
+
+        <b>Obs:</b> Existe o eixo x e y, e usamos principal e secundário, que nada mais é, do que o eixo que os itens estão alinhados como principal, e o outro é o secundário.
+    </p>
+
+    <br>
+    <br>
+    <br>
+
+    <h4> Align Items </h4>
+
+    <p>
+        Já o <b>align-items</b> é para alinhar os itens no eixo secundário, exemplo: <b>align-items: center;</b>, ele tem as seguintes opções de alinhamento: <br>
+        <ul>
+            <li> stretch - estica os itens para preencher o container (padrão)</li> <br>
+            <li> center - alinha os itens ao centro</li> <br>
+            <li> flex-start - alinha os itens ao início do container</li> <br>
+            <li> flex-end - alinha os itens ao final do container</li> <br>
+        </ul>
+    </p>
+
+    <br>
+    <br>
+    <br>
+
+    <h4> Align Content </h4>
+
+    <p>
+        O <b>align-content</b> é para alinhar as linhas do container, ou seja, quando tem mais de uma linha, ele alinha as linhas, exemplo: <b>align-content: center;</b>, ele tem as seguintes opções de alinhamento: <br>
+        <ul>
+            <li> stretch - estica as linhas para preencher o container (padrão)</li> <br>
+            <li> center - alinha as linhas ao centro</li> <br>
+            <li> flex-start - alinha as linhas ao início do container</li> <br>
+            <li> flex-end - alinha as linhas ao final do container</li> <br>
+            <li> space-between - distribui as linhas com espaço igual <b>entre elas</b></li> <br>
+            <li> space-around - distribui as linhas com espaço igual <b>ao redor </b>dela </li> <br>
+        </ul>
+
+        <b>Obs:</b> Normalmente para usar o <b>align-content</b> é necessário ter os valor de hight e width definidos e o <b> flex-wrap: wrap;</b>.
+
+    </p>
+
+    <br>
+    <br>
+    <br>
+
+    <h4> Gap </h4>
+    
+    <p>
+        O <b>gap</b> é uma função para colocar um espaçamento entre os itens, exemplo: <b>gap: 20px;</b>, ele tem as seguintes opções de espaçamento: <br>
+        <ul>
+            <li> gap: 20px; - coloca um espaçamento de 20px entre os itens</li> <br>
+            <li> row-gap: 20px; - coloca um espaçamento de 20px entre as linhas</li> <br>
+            <li> column-gap: 20px; - coloca um espaçamento de 20px entre as colunas</li> <br>
+        </ul>
+    </p>
+
+    <br>
+    <br>
+    <br>
+
+    <h4> Flex Basis </h4>
+
+    <p>
+        O <b>flex-basis</b> é uma função para definir o tamanho inicial dos itens, exemplo: <b>flex-basis: 200px;</b>, ele tem as seguintes opções de tamanho: <br>
+        <ul>
+            <li> flex-basis: 200px; - define o tamanho inicial dos itens como 200px</li> <br>
+            <li> flex-basis: auto; - define o tamanho inicial dos itens como o tamanho do conteúdo (padrão)</li> <br>
+        </ul>
+    </p>
+
+    <br>
+    <br>
+    <br>
+
+    <h4> Flex Grow </h4>
+
+    <p>
+        O <b>flex-grow</b> é uma função para definir o quanto os itens devem crescer para preencher o espaço disponível, exemplo: <b>flex-grow: 1;</b>, ou seja, o tamanho do item vai aumentar, ou 
+        diminuir, de acordo com o espaço disponível. <br>
+        Como visto na linha de cima o <b> flex-grow</b> tem o número 1, que significa que o item vai crescer de 1 para 1 igualmente entre outros itens, mas caso você coloque a função flex-grow em um 
+        item e coloque o número 2, por exemplo: <b>flex-grow: 2;</b>, esse item vai crescer o dobro do que os outros itens, se colocar o número 3, ele vai crescer 3 vezes o tamanho dos outros itens,
+        e assim por diante.
+    </p>
+
+    <br>
+    <br>
+    <br>
+
+    <h4> Flex Shrink </h4>
+    
+    <p>
+        O <b>flex-shrink</b> é o inverso do flex-grow, ou seja, ele define o quanto os itens devem encolher para preencher o espaço disponível, exemplo: <b>flex-shrink: 1;</b>, e assim como o flex-grow, 
+        o número 1 significa que o item vai encolher de 1 para 1 igualmente entre outros itens, mas caso você coloque 2, 3 em diante, ele vai diminuir mais os itens em relação a o que está 1. <br>
+        Assim como o flex-grow, o flex-shrink é usado diretamente nos itens.
+    </p>
+
+    <br>
+    <br>
+    <br>
+
+    <h4> Atalho -> Flex </h4>
+
+    <p>
+        O <b>flex</b> é um atalho para os seguintes itens: <b>flex-basis:</b>, <b>flex-grow:</b>, <b>flex-shrink:</b> respectivamente, assim como <b>margin</b> você pode escrever
+        tudo em uma única linha. <br>
+        
+        Exemplo: <b>flex: 200px 1 1;</b> (flex-basis, flex-grow, flex-shrink) <br>
+    </p>
+
+    <br>
+    <br>
+    <br>
+
+    <h4> Order </h4>
+
+    <p>
+        Com a função <b>order</b> é possível alterar a ordem dos itens dentro do container, exemplo: <b>order: 1;</b>, o item com o número menor vai ficar mais para o início do container, 
+        e assim por diante. Você diz em que ordem o item vai ficar dentro do container. <br>
+        Ao usar o <b>order</b> é necessário colocar em todos os itens do container.
+    </p>
+
+    <br>
+    <br>
+    <br>
+
+    <h4> Align Self </h4>
+
+    <p>
+        O <b>align-self</b> é uma função para alinhar individualmente os itens dentro do container, exemplo: <b>align-self: center;</b>, ele tem as seguintes opções de alinhamento: <br>
+        <ul>
+            <li> align-self: auto; - herda o valor do align-items do container (padrão)</li> <br>
+            <li> align-self: center; - alinha o item ao centro</li> <br>
+            <li> align-self: flex-start; - alinha o item ao início do container</li> <br>
+            <li> align-self: flex-end; - alinha o item ao final do container</li> <br>
+            <li> align-self: stretch; - estica o item para preencher o container</li> <br>
+        </ul>
+    </p>
+
+    <br>
+    <br>
+    <br>
+
+    <h4> Self Align </h4>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="div7">
     
     <h3 id="funçõeslegais"> 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 Funções Interessantes 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 🟄 </h3>
 
@@ -190,14 +435,11 @@
         Se você quiser usar uma imagem de background e a mesma não for do tamanho da page, basta usar o: <b>background-size: cover;</b>, com isso a imagem
         irá se adaptar ao tamanho da page.
         <br>
-
-
-        <br>
-        
-        
     </p>
 
 </div>
+
+
 
     <button class="b-end3"> <a href="#titulo"> Voltar para o começo  </a> </button>
 

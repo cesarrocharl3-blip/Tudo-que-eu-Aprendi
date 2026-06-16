@@ -86,6 +86,15 @@ filter: drop-shadow(0px 0px 5px #191919);
 font-family: "Datatype", monospace;
 }
 
+.buttonDesafio{
+cursor: pointer;
+background-color: #f0ed32;
+border-radius: 25px;
+font-size: 30px;
+filter: drop-shadow(0px 0px 5px #191919);
+font-family: "Datatype", monospace;
+}
+
 
  h2{
         margin-bottom: 20px;

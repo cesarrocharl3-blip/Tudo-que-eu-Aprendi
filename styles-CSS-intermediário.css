@@ -24,6 +24,13 @@ h3{
     font-size: 30px;
 }
 
+h4{
+    font-family: 'Overpass Mono', monospace;
+    font-size: 25px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
 .divbutton{
     a{
         color: black;
@@ -33,6 +40,14 @@ h3{
     .button{
         margin: 0 60px;
     }
+}
+
+.code{
+    background-color: rgb(216, 216, 216);
+    font-size: 18px;
+    width: fit-content;
+    margin: 10px;
+    font-family: "Datatype", monospace;
 }
 
 .button:hover{
@@ -47,6 +62,16 @@ font-size: 30px;
 filter: drop-shadow(0px 0px 5px #191919);
 font-family: "Datatype", monospace;
 }
+
+.buttonDesafio{
+cursor: pointer;
+background-color: #f0ed32;
+border-radius: 25px;
+font-size: 30px;
+filter: drop-shadow(0px 0px 5px #191919);
+font-family: "Datatype", monospace;
+}
+
 
 header ul{
     list-style: none;
@@ -177,3 +202,21 @@ header a:hover{
     text-decoration: none;     
 }
 
+#imgDF {
+
+    height: 300px;
+    display: flex;
+    border: 2px solid black;
+}
+
+#imgFD {
+    height: 400px;
+    display: flex;
+    border: 2px solid black;
+}
+
+#imgWrap {
+    height: 250px;
+    display: flex;
+    border: 2px solid black;
+}
