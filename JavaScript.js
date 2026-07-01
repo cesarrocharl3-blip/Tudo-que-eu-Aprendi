@@ -303,9 +303,9 @@ setInterval(function () {                // Coloca o que vai ser executado
 
 //Exemplo pártico - Cronometro
 
-const timeNumber = document.querySelector("#timeNumber")      // Criei todas as variáveis 
-const start = document.querySelector("#start")
-const pause = document.querySelector("#pause")
+const timeNumber = document.getElementById("timeNumber")      // Criei todas as variáveis 
+const start = document.getElementById("start")
+const pause = document.getElementById("pause")
 
 let tempo = 0
 let set                                                       // Criei a variável que vai guardar o setInterval
@@ -362,38 +362,26 @@ const contacts = [
 
 function buscarContato() {
 
-    // Eu fiz dessa forma abaixo, mas a forma mais simples de fazer isso é usando o break
+    
 
-    // let encontrou = false
+     let encontrou = false
 
-    // for (let i = 0; i < contacts.length; i++) {
+     for (let i = 0; i < contacts.length; i++) {
 
-    //   if (nomeContato.value === contacts[i].name) {
-    //     encontrou = true
-    //   contatoResult.innerHTML = "Nome: " + contacts[i].name + " - Telefone: " + contacts[i].number
-    // }
-    //}
-
-    //  if (encontrou === false) {
-    //    contatoResult.innerHTML = 'Contato não encontrado'
-    //}
-
-    for (let i = 0; i < contacts.length; i++) {
-
-        if (nomeContato.value.toLowerCase() === contacts[i].name.toLowerCase()) {                  // .toLowerCase() - não importa se o usuário digitar em maiúsculo ou minúsculo, o código vai encontrar o contato.
-            contatoResult.innerHTML = `Nome: ${contacts[i].name} - Telefone: ${contacts[i].number}`
-
-            break
-        }
-
-        else {
-            contatoResult.innerHTML = 'Contato não encontrado'
-        }
+    if (nomeContato.value === contacts[i].name) {
+         encontrou = true
+       contatoResult.innerHTML = "Nome: " + contacts[i].name + " - Telefone: " + contacts[i].number
+     }
     }
+
+      if (encontrou === false) {
+        contatoResult.innerHTML = 'Contato não encontrado'
+    }
+
 }
 
 buscar.addEventListener("click", buscarContato)
-
+""
 // For of 
 console.log('---------- For of ----------')
 
